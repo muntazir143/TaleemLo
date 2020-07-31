@@ -73,6 +73,12 @@
     <Compile Include="fees_form.Designer.cs">
       <DependentUpon>fees_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="fee_voucher_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fee_voucher_form.Designer.cs">
+      <DependentUpon>fee_voucher_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fees_form.resx">
       <DependentUpon>fees_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fee_voucher_form.resx">
+      <DependentUpon>fee_voucher_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentFormReportViewer.resx">
       <DependentUpon>StudentFormReportViewer.cs</DependentUpon>
