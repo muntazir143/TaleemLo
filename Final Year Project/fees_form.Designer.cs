@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fees_form));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.close_btn = new Bunifu.Framework.UI.BunifuImageButton();
             this.label1 = new System.Windows.Forms.Label();
             this.class_cmbbox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,10 +50,11 @@
             this.delete_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.update_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.add_btn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.close_btn = new Bunifu.Framework.UI.BunifuImageButton();
+            this.late_txtbox = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.feeStructure_dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.feeStructure_dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -76,6 +78,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1069, 80);
             this.panel1.TabIndex = 4;
+            // 
+            // close_btn
+            // 
+            this.close_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.close_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            this.close_btn.Image = ((System.Drawing.Image)(resources.GetObject("close_btn.Image")));
+            this.close_btn.ImageActive = null;
+            this.close_btn.Location = new System.Drawing.Point(1025, 23);
+            this.close_btn.Name = "close_btn";
+            this.close_btn.Size = new System.Drawing.Size(32, 34);
+            this.close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.close_btn.TabIndex = 1;
+            this.close_btn.TabStop = false;
+            this.close_btn.Zoom = 10;
+            this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
             // 
             // label1
             // 
@@ -171,7 +188,7 @@
             this.miscellaneous_txtbox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.miscellaneous_txtbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.miscellaneous_txtbox.isPassword = false;
-            this.miscellaneous_txtbox.Location = new System.Drawing.Point(141, 278);
+            this.miscellaneous_txtbox.Location = new System.Drawing.Point(141, 342);
             this.miscellaneous_txtbox.Margin = new System.Windows.Forms.Padding(4);
             this.miscellaneous_txtbox.Name = "miscellaneous_txtbox";
             this.miscellaneous_txtbox.Size = new System.Drawing.Size(250, 35);
@@ -183,7 +200,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 287);
+            this.label5.Location = new System.Drawing.Point(12, 351);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 16);
             this.label5.TabIndex = 86;
@@ -192,19 +209,19 @@
             // feeStructure_dgv
             // 
             this.feeStructure_dgv.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.feeStructure_dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.feeStructure_dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.feeStructure_dgv.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.feeStructure_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.feeStructure_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.feeStructure_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.feeStructure_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.feeStructure_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.feeStructure_dgv.DoubleBuffered = true;
             this.feeStructure_dgv.EnableHeadersVisualStyles = false;
@@ -361,20 +378,33 @@
             this.add_btn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
             // 
-            // close_btn
+            // late_txtbox
             // 
-            this.close_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.close_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
-            this.close_btn.Image = ((System.Drawing.Image)(resources.GetObject("close_btn.Image")));
-            this.close_btn.ImageActive = null;
-            this.close_btn.Location = new System.Drawing.Point(1025, 23);
-            this.close_btn.Name = "close_btn";
-            this.close_btn.Size = new System.Drawing.Size(32, 34);
-            this.close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.close_btn.TabIndex = 1;
-            this.close_btn.TabStop = false;
-            this.close_btn.Zoom = 10;
-            this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
+            this.late_txtbox.BorderColorFocused = System.Drawing.Color.Blue;
+            this.late_txtbox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.late_txtbox.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.late_txtbox.BorderThickness = 3;
+            this.late_txtbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.late_txtbox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.late_txtbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.late_txtbox.isPassword = false;
+            this.late_txtbox.Location = new System.Drawing.Point(141, 284);
+            this.late_txtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.late_txtbox.Name = "late_txtbox";
+            this.late_txtbox.Size = new System.Drawing.Size(250, 35);
+            this.late_txtbox.TabIndex = 94;
+            this.late_txtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.late_txtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.late_txtbox_KeyPress);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(24, 293);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 16);
+            this.label6.TabIndex = 93;
+            this.label6.Text = "Late";
             // 
             // fees_form
             // 
@@ -382,6 +412,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1069, 629);
+            this.Controls.Add(this.late_txtbox);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.view_btn);
             this.Controls.Add(this.delete_btn);
             this.Controls.Add(this.update_btn);
@@ -402,8 +434,8 @@
             this.Load += new System.EventHandler(this.fees_form_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.feeStructure_dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.feeStructure_dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -429,5 +461,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton delete_btn;
         private Bunifu.Framework.UI.BunifuFlatButton update_btn;
         private Bunifu.Framework.UI.BunifuFlatButton add_btn;
+        private Bunifu.Framework.UI.BunifuMetroTextbox late_txtbox;
+        private System.Windows.Forms.Label label6;
     }
 }
