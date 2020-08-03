@@ -70,5 +70,11 @@ namespace Final_Year_Project
             fees_form fees_Form = new fees_form();
             fees_Form.Show();
         }
+
+        private void feeVoucher_btn_Click(object sender, EventArgs e)
+        {
+            fee_voucher_form fee_Voucher_Form = new fee_voucher_form();
+            fee_Voucher_Form.Show();
+        }
     }
 }

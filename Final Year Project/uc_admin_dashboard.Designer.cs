@@ -40,6 +40,7 @@
             this.teachers_btn = new Bunifu.Framework.UI.BunifuTileButton();
             this.students_btn = new Bunifu.Framework.UI.BunifuTileButton();
             this.feeStructure_btn = new Bunifu.Framework.UI.BunifuTileButton();
+            this.feeVoucher_btn = new Bunifu.Framework.UI.BunifuTileButton();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel3
@@ -244,11 +245,32 @@
             this.feeStructure_btn.TabIndex = 27;
             this.feeStructure_btn.Click += new System.EventHandler(this.feeStructure_btn_Click);
             // 
+            // feeVoucher_btn
+            // 
+            this.feeVoucher_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            this.feeVoucher_btn.color = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            this.feeVoucher_btn.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(78)))));
+            this.feeVoucher_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.feeVoucher_btn.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.feeVoucher_btn.ForeColor = System.Drawing.Color.White;
+            this.feeVoucher_btn.Image = global::Final_Year_Project.Properties.Resources.icons8_attendance_240px;
+            this.feeVoucher_btn.ImagePosition = 18;
+            this.feeVoucher_btn.ImageZoom = 50;
+            this.feeVoucher_btn.LabelPosition = 38;
+            this.feeVoucher_btn.LabelText = "Fee";
+            this.feeVoucher_btn.Location = new System.Drawing.Point(816, 293);
+            this.feeVoucher_btn.Margin = new System.Windows.Forms.Padding(6);
+            this.feeVoucher_btn.Name = "feeVoucher_btn";
+            this.feeVoucher_btn.Size = new System.Drawing.Size(128, 129);
+            this.feeVoucher_btn.TabIndex = 28;
+            this.feeVoucher_btn.Click += new System.EventHandler(this.feeVoucher_btn_Click);
+            // 
             // uc_admin_dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.feeVoucher_btn);
             this.Controls.Add(this.feeStructure_btn);
             this.Controls.Add(this.bunifuTileButton1);
             this.Controls.Add(this.branches_btn);
@@ -280,5 +302,6 @@
         private Bunifu.Framework.UI.BunifuTileButton branches_btn;
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
         private Bunifu.Framework.UI.BunifuTileButton feeStructure_btn;
+        private Bunifu.Framework.UI.BunifuTileButton feeVoucher_btn;
     }
 }

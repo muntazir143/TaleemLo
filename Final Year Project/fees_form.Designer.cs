@@ -35,7 +35,6 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.close_btn = new Bunifu.Framework.UI.BunifuImageButton();
             this.label1 = new System.Windows.Forms.Label();
             this.class_cmbbox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,9 +49,10 @@
             this.delete_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.update_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.add_btn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.close_btn = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.feeStructure_dgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -76,21 +76,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1069, 80);
             this.panel1.TabIndex = 4;
-            // 
-            // close_btn
-            // 
-            this.close_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.close_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
-            this.close_btn.Image = ((System.Drawing.Image)(resources.GetObject("close_btn.Image")));
-            this.close_btn.ImageActive = null;
-            this.close_btn.Location = new System.Drawing.Point(1025, 23);
-            this.close_btn.Name = "close_btn";
-            this.close_btn.Size = new System.Drawing.Size(32, 34);
-            this.close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.close_btn.TabIndex = 1;
-            this.close_btn.TabStop = false;
-            this.close_btn.Zoom = 10;
-            this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
             // 
             // label1
             // 
@@ -376,6 +361,21 @@
             this.add_btn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
             // 
+            // close_btn
+            // 
+            this.close_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.close_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            this.close_btn.Image = ((System.Drawing.Image)(resources.GetObject("close_btn.Image")));
+            this.close_btn.ImageActive = null;
+            this.close_btn.Location = new System.Drawing.Point(1025, 23);
+            this.close_btn.Name = "close_btn";
+            this.close_btn.Size = new System.Drawing.Size(32, 34);
+            this.close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.close_btn.TabIndex = 1;
+            this.close_btn.TabStop = false;
+            this.close_btn.Zoom = 10;
+            this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
+            // 
             // fees_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -402,8 +402,8 @@
             this.Load += new System.EventHandler(this.fees_form_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.feeStructure_dgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
