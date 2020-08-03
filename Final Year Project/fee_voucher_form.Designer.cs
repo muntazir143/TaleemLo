@@ -46,6 +46,8 @@
             this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label3 = new System.Windows.Forms.Label();
             this.feevoucher_dgv = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.feeVoucherID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.feevoucher_dgv)).BeginInit();
@@ -105,6 +107,7 @@
             this.class_cmbbox.Name = "class_cmbbox";
             this.class_cmbbox.Size = new System.Drawing.Size(250, 21);
             this.class_cmbbox.TabIndex = 83;
+            this.class_cmbbox.SelectedIndexChanged += new System.EventHandler(this.class_cmbbox_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -209,6 +212,9 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.feevoucher_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.feevoucher_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.feevoucher_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.feeVoucherID,
+            this.name});
             this.feevoucher_dgv.DoubleBuffered = true;
             this.feevoucher_dgv.EnableHeadersVisualStyles = false;
             this.feevoucher_dgv.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
@@ -218,6 +224,16 @@
             this.feevoucher_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.feevoucher_dgv.Size = new System.Drawing.Size(612, 412);
             this.feevoucher_dgv.TabIndex = 92;
+            // 
+            // feeVoucherID
+            // 
+            this.feeVoucherID.HeaderText = "ID";
+            this.feeVoucherID.Name = "feeVoucherID";
+            // 
+            // name
+            // 
+            this.name.HeaderText = "Name";
+            this.name.Name = "name";
             // 
             // fee_voucher_form
             // 
@@ -264,5 +280,7 @@
         private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
         private System.Windows.Forms.Label label3;
         private Bunifu.Framework.UI.BunifuCustomDataGrid feevoucher_dgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn feeVoucherID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
     }
 }
