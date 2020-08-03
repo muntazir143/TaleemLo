@@ -77,11 +77,13 @@ namespace Final_Year_Project
             miscellaneous_txtbox.Text = "";
             monthly_txtbox.Text = "";
             late_txtbox.Text = "";
+            feeID_txtbox.Text = "";
         }
 
         private void feeStructure_dgv_RowHeaderMouseDoubleClick_1(object sender, DataGridViewCellMouseEventArgs e)
         {
             int rowindex = e.RowIndex;
+            feeID_txtbox.Text = feeStructure_dgv.Rows[rowindex].Cells[0].Value.ToString();
             class_cmbbox.Text = feeStructure_dgv.Rows[rowindex].Cells[1].Value.ToString();
             admissionFee_txtbox.Text = feeStructure_dgv.Rows[rowindex].Cells[2].Value.ToString();
             monthly_txtbox.Text = feeStructure_dgv.Rows[rowindex].Cells[3].Value.ToString();
@@ -129,8 +131,11 @@ namespace Final_Year_Project
         {
             try
             {
+      
+
+
                 //string check = FeeID.DataPropertyName = "FeeID";
-                string update = "update FeeStructure set ClassID=@ClassID, AdmissionFee=@AdmissionFee, MonthlyFee=@MonthlyFee, LateFee=@LateFee, MiscellaneousFee=@MiscellaneousFee where FeeID='"+ feeStructure_dgv.Rows[0].Cells["FeeID"].Value + "'";
+                string update = "update FeeStructure set ClassID=@ClassID, AdmissionFee=@AdmissionFee, MonthlyFee=@MonthlyFee, LateFee=@LateFee, MiscellaneousFee=@MiscellaneousFee where FeeID='"+ feeID_txtbox.Text + "'";
                 SqlCommand cmd = new SqlCommand(update, conn);
                 //cmd.Parameters.AddWithValue("@AttendanceID", feeStructure_dgv.Rows[0].Cells["FeeID"].Value);
                 cmd.Parameters.AddWithValue("@ClassID", class_cmbbox.SelectedValue);
@@ -153,7 +158,7 @@ namespace Final_Year_Project
         {
             try
             {
-                string delete = "delete from FeeStructure FeeID='" + feeStructure_dgv.Rows[0].Cells["FeeID"].Value + "'";
+                string delete = "delete from FeeStructure FeeID='" + feeID_txtbox.Text + "'";
                 SqlCommand cmd = new SqlCommand(delete, conn);
 
                 cmd.ExecuteNonQuery();

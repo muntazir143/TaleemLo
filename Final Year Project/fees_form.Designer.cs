@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fees_form));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -52,6 +52,8 @@
             this.add_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.late_txtbox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label6 = new System.Windows.Forms.Label();
+            this.feeID_txtbox = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.feeStructure_dgv)).BeginInit();
@@ -107,7 +109,7 @@
             // class_cmbbox
             // 
             this.class_cmbbox.FormattingEnabled = true;
-            this.class_cmbbox.Location = new System.Drawing.Point(141, 116);
+            this.class_cmbbox.Location = new System.Drawing.Point(142, 178);
             this.class_cmbbox.Name = "class_cmbbox";
             this.class_cmbbox.Size = new System.Drawing.Size(250, 21);
             this.class_cmbbox.TabIndex = 81;
@@ -116,7 +118,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(41, 117);
+            this.label4.Location = new System.Drawing.Point(42, 179);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 16);
             this.label4.TabIndex = 80;
@@ -132,7 +134,7 @@
             this.admissionFee_txtbox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.admissionFee_txtbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.admissionFee_txtbox.isPassword = false;
-            this.admissionFee_txtbox.Location = new System.Drawing.Point(141, 164);
+            this.admissionFee_txtbox.Location = new System.Drawing.Point(142, 226);
             this.admissionFee_txtbox.Margin = new System.Windows.Forms.Padding(4);
             this.admissionFee_txtbox.Name = "admissionFee_txtbox";
             this.admissionFee_txtbox.Size = new System.Drawing.Size(250, 35);
@@ -144,7 +146,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 173);
+            this.label3.Location = new System.Drawing.Point(13, 235);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 16);
             this.label3.TabIndex = 82;
@@ -160,7 +162,7 @@
             this.monthly_txtbox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.monthly_txtbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.monthly_txtbox.isPassword = false;
-            this.monthly_txtbox.Location = new System.Drawing.Point(141, 222);
+            this.monthly_txtbox.Location = new System.Drawing.Point(142, 284);
             this.monthly_txtbox.Margin = new System.Windows.Forms.Padding(4);
             this.monthly_txtbox.Name = "monthly_txtbox";
             this.monthly_txtbox.Size = new System.Drawing.Size(250, 35);
@@ -172,7 +174,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 231);
+            this.label2.Location = new System.Drawing.Point(25, 293);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 16);
             this.label2.TabIndex = 84;
@@ -188,7 +190,7 @@
             this.miscellaneous_txtbox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.miscellaneous_txtbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.miscellaneous_txtbox.isPassword = false;
-            this.miscellaneous_txtbox.Location = new System.Drawing.Point(141, 342);
+            this.miscellaneous_txtbox.Location = new System.Drawing.Point(142, 404);
             this.miscellaneous_txtbox.Margin = new System.Windows.Forms.Padding(4);
             this.miscellaneous_txtbox.Name = "miscellaneous_txtbox";
             this.miscellaneous_txtbox.Size = new System.Drawing.Size(250, 35);
@@ -200,7 +202,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 351);
+            this.label5.Location = new System.Drawing.Point(13, 413);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 16);
             this.label5.TabIndex = 86;
@@ -209,19 +211,19 @@
             // feeStructure_dgv
             // 
             this.feeStructure_dgv.AllowUserToAddRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.feeStructure_dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.feeStructure_dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.feeStructure_dgv.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.feeStructure_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.feeStructure_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.feeStructure_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.feeStructure_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.feeStructure_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.feeStructure_dgv.DoubleBuffered = true;
             this.feeStructure_dgv.EnableHeadersVisualStyles = false;
@@ -388,7 +390,7 @@
             this.late_txtbox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.late_txtbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.late_txtbox.isPassword = false;
-            this.late_txtbox.Location = new System.Drawing.Point(141, 284);
+            this.late_txtbox.Location = new System.Drawing.Point(142, 346);
             this.late_txtbox.Margin = new System.Windows.Forms.Padding(4);
             this.late_txtbox.Name = "late_txtbox";
             this.late_txtbox.Size = new System.Drawing.Size(250, 35);
@@ -400,11 +402,38 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(24, 293);
+            this.label6.Location = new System.Drawing.Point(25, 355);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 16);
             this.label6.TabIndex = 93;
             this.label6.Text = "Late";
+            // 
+            // feeID_txtbox
+            // 
+            this.feeID_txtbox.BorderColorFocused = System.Drawing.Color.Blue;
+            this.feeID_txtbox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.feeID_txtbox.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.feeID_txtbox.BorderThickness = 3;
+            this.feeID_txtbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.feeID_txtbox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.feeID_txtbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.feeID_txtbox.isPassword = false;
+            this.feeID_txtbox.Location = new System.Drawing.Point(142, 116);
+            this.feeID_txtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.feeID_txtbox.Name = "feeID_txtbox";
+            this.feeID_txtbox.Size = new System.Drawing.Size(250, 35);
+            this.feeID_txtbox.TabIndex = 96;
+            this.feeID_txtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(54, 125);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(21, 16);
+            this.label7.TabIndex = 95;
+            this.label7.Text = "ID";
             // 
             // fees_form
             // 
@@ -412,6 +441,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1069, 629);
+            this.Controls.Add(this.feeID_txtbox);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.late_txtbox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.view_btn);
@@ -463,5 +494,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton add_btn;
         private Bunifu.Framework.UI.BunifuMetroTextbox late_txtbox;
         private System.Windows.Forms.Label label6;
+        private Bunifu.Framework.UI.BunifuMetroTextbox feeID_txtbox;
+        private System.Windows.Forms.Label label7;
     }
 }
