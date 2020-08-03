@@ -73,6 +73,12 @@
     <Compile Include="fees_form.Designer.cs">
       <DependentUpon>fees_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="FeeVoucherReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FeeVoucherReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="fee_voucher_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fees_form.resx">
       <DependentUpon>fees_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeeVoucherReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FeeVoucherReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="fee_voucher_form.resx">
       <DependentUpon>fee_voucher_form.cs</DependentUpon>
