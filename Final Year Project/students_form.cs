@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Management;
 using System.Text;
@@ -18,11 +19,16 @@ namespace Final_Year_Project
         static string connstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
         SqlConnection conn = new SqlConnection(connstring);
 
+        String fileName;
+        
+
         public students_form()
         {
             InitializeComponent();
             conn.Open();
         }
+
+
 
                
         private void close_btn_Click(object sender, EventArgs e)
@@ -106,6 +112,12 @@ namespace Final_Year_Project
             admissionDate.Value = DateTime.Now;
         }
 
+        Image BinaryToImage(byte[] data)
+        {
+            MemoryStream memoryStream = new MemoryStream(data);
+            return Image.FromStream(memoryStream);
+        }
+
         private void students_dgv_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int rowindex = e.RowIndex;
@@ -118,11 +130,13 @@ namespace Final_Year_Project
             admissionDate.Value = DateTime.Parse(students_dgv.Rows[rowindex].Cells[6].Value.ToString());
             class_cmbbox.Text = students_dgv.Rows[rowindex].Cells[7].Value.ToString();
             section_cmbbox.Text = students_dgv.Rows[rowindex].Cells[8].Value.ToString();
+            pictureBox1.Image = BinaryToImage((byte[])students_dgv.Rows[rowindex].Cells[9].Value);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void ViewAll()
         {
-            string view = "select RollNo as 'Roll Number', Name, FathersName as 'Father Name', Gender, DOB, Mobile, AdmissionDate as 'Admission Date',ClassName as 'Class', SectionName as 'Section' from Students left join Classes on Students.ClassID = Classes.ClassID left join Sections on Students.SectionID = Sections.SectionID";
+            string view = "select RollNo as 'Roll Number', Name, FathersName as 'Father Name', Gender, DOB, Mobile, AdmissionDate as 'Admission Date',ClassName as 'Class', SectionName as 'Section', Image from Students left join Classes on Students.ClassID = Classes.ClassID left join Sections on Students.SectionID = Sections.SectionID";
             SqlDataAdapter adapter = new SqlDataAdapter(view, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -136,11 +150,13 @@ namespace Final_Year_Project
 
         private void add_btn_Click(object sender, EventArgs e)
         {
+            var imageData = ImagetoBinary(pictureBox1.Image);
+            
             try
             {
                 //conn.Open();
                 
-                string insert = "insert into Students(RollNo,Name,FathersName,Gender,DOB,Mobile,AdmissionDate,ClassID,SectionID) values(@RollNo,@Name,@FathersName,@Gender,@DOB,@Mobile,@AdmissionDate,@ClassID,@SectionID)";
+                string insert = "insert into Students(RollNo,Name,FathersName,Gender,DOB,Mobile,AdmissionDate,ClassID,SectionID,Image) values(@RollNo,@Name,@FathersName,@Gender,@DOB,@Mobile,@AdmissionDate,@ClassID,@SectionID,@Image)";
                 SqlCommand cmd = new SqlCommand(insert, conn);
                 cmd.Parameters.AddWithValue("@RollNo", rollno_txtbox.Text.Trim());
                 cmd.Parameters.AddWithValue("@Name", name_txtbox.Text.Trim());
@@ -151,6 +167,7 @@ namespace Final_Year_Project
                 cmd.Parameters.AddWithValue("@AdmissionDate", admissionDate.Value);
                 cmd.Parameters.AddWithValue("@ClassID", class_cmbbox.SelectedValue);
                 cmd.Parameters.AddWithValue("@SectionID", section_cmbbox.SelectedValue);
+                cmd.Parameters.AddWithValue("@Image", imageData);
                 cmd.ExecuteNonQuery();
                 Clear();
                 ViewAll();
@@ -167,10 +184,11 @@ namespace Final_Year_Project
 
         private void update_btn_Click(object sender, EventArgs e)
         {
+            var updatedImage = ImagetoBinary(pictureBox1.Image);
             try
             {
                 //conn.Open();
-                string update = "update Students set Name=@Name, FathersName=@FathersName, Gender=@Gender, DOB=@DOB, Mobile=@Mobile, AdmissionDate=@AdmissionDate, ClassID=@ClassID, SectionID=@SectionID where RollNo=@RollNo";
+                string update = "update Students set Name=@Name, FathersName=@FathersName, Gender=@Gender, DOB=@DOB, Mobile=@Mobile, AdmissionDate=@AdmissionDate, ClassID=@ClassID, SectionID=@SectionID, Image=@Image where RollNo=@RollNo";
                 SqlCommand cmd = new SqlCommand(update, conn);
                 cmd.Parameters.AddWithValue("@RollNo", rollno_txtbox.Text.Trim());
                 cmd.Parameters.AddWithValue("@Name", name_txtbox.Text.Trim());
@@ -181,6 +199,7 @@ namespace Final_Year_Project
                 cmd.Parameters.AddWithValue("@AdmissionDate", admissionDate.Value);
                 cmd.Parameters.AddWithValue("@ClassID", class_cmbbox.SelectedValue);
                 cmd.Parameters.AddWithValue("@SectionID", section_cmbbox.SelectedValue);
+                cmd.Parameters.AddWithValue("@Image", updatedImage);
                 cmd.ExecuteNonQuery();
                 Clear();
                 ViewAll();
@@ -291,5 +310,35 @@ namespace Final_Year_Project
         {
             reportGenerator();
         }
+
+        public void image_btn_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Multiselect = false;
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                fileName = openFileDialog1.FileName;
+                var fileSize = new FileInfo(fileName);
+             
+                if(fileSize.Length > 30720)
+                {
+                    MessageBox.Show("Select Image less than 30kb", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    pictureBox1.Image = Image.FromFile(fileName);
+                    pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+            }
+        }
+
+        //Convert Image to binary
+        byte[] ImagetoBinary(Image img)
+        {
+            MemoryStream memoryStream = new MemoryStream();
+            img.Save(memoryStream, System.Drawing.Imaging.ImageFormat.Jpeg);
+            return memoryStream.ToArray();
+        }
+
+
     }
 }

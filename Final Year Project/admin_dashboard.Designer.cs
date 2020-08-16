@@ -45,6 +45,7 @@
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.SidePanel = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.uc_overview_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -57,6 +58,7 @@
             this.bunifuGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             this.SidePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -229,6 +231,7 @@
             // 
             this.SidePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SidePanel.BackgroundImage")));
             this.SidePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SidePanel.Controls.Add(this.pictureBox1);
             this.SidePanel.Controls.Add(this.uc_overview_btn);
             this.SidePanel.Controls.Add(this.bunifuFlatButton4);
             this.SidePanel.Controls.Add(this.bunifuFlatButton3);
@@ -244,6 +247,16 @@
             this.SidePanel.Quality = 10;
             this.SidePanel.Size = new System.Drawing.Size(200, 720);
             this.SidePanel.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Final_Year_Project.Properties.Resources.TaleemLO_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(173, 107);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // uc_overview_btn
             // 
@@ -439,6 +452,7 @@
             this.bunifuGradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
             this.SidePanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -465,5 +479,6 @@
         private Bunifu.Framework.UI.BunifuImageButton close_btn;
         private Bunifu.Framework.UI.BunifuCustomLabel lbl_loggedin;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

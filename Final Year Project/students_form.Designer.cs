@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(students_form));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -63,9 +63,13 @@
             this.search_cmbbox = new System.Windows.Forms.ComboBox();
             this.search_txtbox = new System.Windows.Forms.TextBox();
             this.print_btn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.image_btn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.students_dgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -84,7 +88,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(393, 25);
+            this.label1.Location = new System.Drawing.Point(461, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 32);
             this.label1.TabIndex = 0;
@@ -96,7 +100,7 @@
             this.close_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
             this.close_btn.Image = ((System.Drawing.Image)(resources.GetObject("close_btn.Image")));
             this.close_btn.ImageActive = null;
-            this.close_btn.Location = new System.Drawing.Point(1034, 23);
+            this.close_btn.Location = new System.Drawing.Point(1085, 23);
             this.close_btn.Name = "close_btn";
             this.close_btn.Size = new System.Drawing.Size(32, 34);
             this.close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -107,12 +111,13 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.close_btn);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1078, 80);
+            this.panel1.Size = new System.Drawing.Size(1129, 80);
             this.panel1.TabIndex = 2;
             // 
             // section_cmbbox
@@ -189,19 +194,19 @@
             // 
             // students_dgv
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.students_dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.students_dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.students_dgv.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.students_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.students_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.students_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.students_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.students_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.students_dgv.DoubleBuffered = true;
             this.students_dgv.EnableHeadersVisualStyles = false;
@@ -210,7 +215,7 @@
             this.students_dgv.Location = new System.Drawing.Point(399, 169);
             this.students_dgv.Name = "students_dgv";
             this.students_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.students_dgv.Size = new System.Drawing.Size(650, 457);
+            this.students_dgv.Size = new System.Drawing.Size(704, 457);
             this.students_dgv.TabIndex = 65;
             this.students_dgv.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.students_dgv_RowHeaderMouseDoubleClick);
             // 
@@ -377,14 +382,14 @@
             this.view_btn.IconVisible = true;
             this.view_btn.IconZoom = 90D;
             this.view_btn.IsTab = false;
-            this.view_btn.Location = new System.Drawing.Point(873, 667);
+            this.view_btn.Location = new System.Drawing.Point(973, 651);
             this.view_btn.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.view_btn.Name = "view_btn";
             this.view_btn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
             this.view_btn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.view_btn.OnHoverTextColor = System.Drawing.Color.White;
             this.view_btn.selected = false;
-            this.view_btn.Size = new System.Drawing.Size(150, 43);
+            this.view_btn.Size = new System.Drawing.Size(130, 43);
             this.view_btn.TabIndex = 81;
             this.view_btn.Text = "View";
             this.view_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -413,14 +418,14 @@
             this.delete_btn.IconVisible = true;
             this.delete_btn.IconZoom = 90D;
             this.delete_btn.IsTab = false;
-            this.delete_btn.Location = new System.Drawing.Point(698, 667);
+            this.delete_btn.Location = new System.Drawing.Point(828, 651);
             this.delete_btn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.delete_btn.Name = "delete_btn";
             this.delete_btn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
             this.delete_btn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.delete_btn.OnHoverTextColor = System.Drawing.Color.White;
             this.delete_btn.selected = false;
-            this.delete_btn.Size = new System.Drawing.Size(147, 43);
+            this.delete_btn.Size = new System.Drawing.Size(130, 43);
             this.delete_btn.TabIndex = 80;
             this.delete_btn.Text = "Delete";
             this.delete_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -449,14 +454,14 @@
             this.update_btn.IconVisible = true;
             this.update_btn.IconZoom = 90D;
             this.update_btn.IsTab = false;
-            this.update_btn.Location = new System.Drawing.Point(520, 667);
+            this.update_btn.Location = new System.Drawing.Point(683, 651);
             this.update_btn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.update_btn.Name = "update_btn";
             this.update_btn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
             this.update_btn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.update_btn.OnHoverTextColor = System.Drawing.Color.White;
             this.update_btn.selected = false;
-            this.update_btn.Size = new System.Drawing.Size(146, 43);
+            this.update_btn.Size = new System.Drawing.Size(130, 43);
             this.update_btn.TabIndex = 79;
             this.update_btn.Text = "Update";
             this.update_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -485,14 +490,14 @@
             this.add_btn.IconVisible = true;
             this.add_btn.IconZoom = 90D;
             this.add_btn.IsTab = false;
-            this.add_btn.Location = new System.Drawing.Point(342, 667);
+            this.add_btn.Location = new System.Drawing.Point(538, 651);
             this.add_btn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.add_btn.Name = "add_btn";
             this.add_btn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
             this.add_btn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.add_btn.OnHoverTextColor = System.Drawing.Color.White;
             this.add_btn.selected = false;
-            this.add_btn.Size = new System.Drawing.Size(154, 43);
+            this.add_btn.Size = new System.Drawing.Size(130, 43);
             this.add_btn.TabIndex = 78;
             this.add_btn.Text = "Add";
             this.add_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -542,14 +547,14 @@
             this.print_btn.IconVisible = true;
             this.print_btn.IconZoom = 90D;
             this.print_btn.IsTab = false;
-            this.print_btn.Location = new System.Drawing.Point(137, 667);
+            this.print_btn.Location = new System.Drawing.Point(390, 651);
             this.print_btn.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.print_btn.Name = "print_btn";
             this.print_btn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
             this.print_btn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.print_btn.OnHoverTextColor = System.Drawing.Color.White;
             this.print_btn.selected = false;
-            this.print_btn.Size = new System.Drawing.Size(180, 43);
+            this.print_btn.Size = new System.Drawing.Size(130, 43);
             this.print_btn.TabIndex = 84;
             this.print_btn.Text = "Print";
             this.print_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -557,12 +562,62 @@
             this.print_btn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.print_btn.Click += new System.EventHandler(this.print_btn_Click);
             // 
+            // image_btn
+            // 
+            this.image_btn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.image_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            this.image_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.image_btn.BorderRadius = 0;
+            this.image_btn.ButtonText = "Open";
+            this.image_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.image_btn.DisabledColor = System.Drawing.Color.Gray;
+            this.image_btn.Iconcolor = System.Drawing.Color.Transparent;
+            this.image_btn.Iconimage = ((System.Drawing.Image)(resources.GetObject("image_btn.Iconimage")));
+            this.image_btn.Iconimage_right = null;
+            this.image_btn.Iconimage_right_Selected = null;
+            this.image_btn.Iconimage_Selected = null;
+            this.image_btn.IconMarginLeft = 0;
+            this.image_btn.IconMarginRight = 0;
+            this.image_btn.IconRightVisible = true;
+            this.image_btn.IconRightZoom = 0D;
+            this.image_btn.IconVisible = true;
+            this.image_btn.IconZoom = 90D;
+            this.image_btn.IsTab = false;
+            this.image_btn.Location = new System.Drawing.Point(24, 614);
+            this.image_btn.Margin = new System.Windows.Forms.Padding(3, 7, 3, 7);
+            this.image_btn.Name = "image_btn";
+            this.image_btn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            this.image_btn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.image_btn.OnHoverTextColor = System.Drawing.Color.White;
+            this.image_btn.selected = false;
+            this.image_btn.Size = new System.Drawing.Size(120, 40);
+            this.image_btn.TabIndex = 85;
+            this.image_btn.Text = "Open";
+            this.image_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.image_btn.Textcolor = System.Drawing.Color.White;
+            this.image_btn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.image_btn.Click += new System.EventHandler(this.image_btn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(160, 584);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(192, 192);
+            this.pictureBox1.TabIndex = 86;
+            this.pictureBox1.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // students_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1078, 749);
+            this.ClientSize = new System.Drawing.Size(1129, 788);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.image_btn);
             this.Controls.Add(this.print_btn);
             this.Controls.Add(this.search_txtbox);
             this.Controls.Add(this.search_cmbbox);
@@ -601,6 +656,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.students_dgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -639,5 +695,8 @@
         private System.Windows.Forms.ComboBox search_cmbbox;
         private System.Windows.Forms.TextBox search_txtbox;
         private Bunifu.Framework.UI.BunifuFlatButton print_btn;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.Framework.UI.BunifuFlatButton image_btn;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
