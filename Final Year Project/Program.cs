@@ -16,7 +16,7 @@ namespace Final_Year_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new admin_dashboard());
+            Application.Run(new splashscreen());
         }
     }
 }

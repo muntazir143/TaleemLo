@@ -26,8 +26,9 @@ namespace Final_Year_Project
                 {
                     timer1.Stop();
                     login l = new login();
-                    l.Show();
                     this.Hide();
+                    l.Show();
+                    
                 }
             }
             catch (Exception)

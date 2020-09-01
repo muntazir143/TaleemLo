@@ -20,6 +20,7 @@ namespace Final_Year_Project
         public users_form()
         {
             InitializeComponent();
+            conn.Open();
         }
 
         static string connstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
@@ -27,15 +28,17 @@ namespace Final_Year_Project
 
         public void view()
         {
-            List<userform_gettersetters> list = conn.Query<userform_gettersetters>("users_view", commandType: CommandType.StoredProcedure).ToList<userform_gettersetters>();
-            users_dgv.DataSource = list;
+            string view = "select UserID, Name, Gender, Mobile, Username, Password, UserType from Users";
+            SqlDataAdapter adapter = new SqlDataAdapter(view, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            users_dgv.DataSource = dt;
         }
 
-        public void clear()
+        public void Clear()
         {
             id_txtbox.Text = "";
             firstname_txtbox.Text = "";
-            lastname_txtbox.Text = "";
             username_txtbox.Text = "";
             password_txtbox.Text = "";
             contact_txtbox.Text = "";
@@ -48,33 +51,22 @@ namespace Final_Year_Project
         {
             try
             {
-                conn.Open();
-
-                //MemoryStream memoryStream = new MemoryStream();
-                //picture.Save(memoryStream, ImageFormat.Jpeg);
-                //byte[] arr = memoryStream.ToArray();
-
-                DynamicParameters parameters = new DynamicParameters();
-                parameters.Add("@first_name", firstname_txtbox.Text.Trim());
-                parameters.Add("@last_name", lastname_txtbox.Text.Trim());
-                parameters.Add("@username", username_txtbox.Text.Trim());
-                parameters.Add("@password", password_txtbox.Text.Trim());
-                parameters.Add("@contact", contact_txtbox.Text.Trim());
-                parameters.Add("@email", email_txtbox.Text.Trim());
-                parameters.Add("@gender", gender_dd.Text.Trim());
-                parameters.Add("@user_type", usertype_dd.Text.Trim());
-                parameters.Add("@added_date", DateTime.Now);
-                //parameters.Add("@image", arr);
-
-                conn.Execute("users_insert", parameters, commandType: CommandType.StoredProcedure);
+                string insert = "insert into Users(Name,Gender,DOB,Mobile,Username,Password,UserType) values(@Name,@Gender,@DOB,@Mobile,@Username,@Password,@UserType)";
+                SqlCommand cmd = new SqlCommand(insert, conn);
+                cmd.Parameters.AddWithValue("@Name", firstname_txtbox.Text.Trim());
+                cmd.Parameters.AddWithValue("@Gender", gender_dd.SelectedItem);
+                cmd.Parameters.AddWithValue("@DOB", DateTime.Now);
+                cmd.Parameters.AddWithValue("@Mobile", contact_txtbox.Text.Trim());
+                cmd.Parameters.AddWithValue("@Username", username_txtbox.Text.Trim());
+                cmd.Parameters.AddWithValue("@Password", password_txtbox.Text.Trim());
+                cmd.Parameters.AddWithValue("@UserType", usertype_dd.SelectedItem.ToString());
+                cmd.ExecuteNonQuery();
+                Clear();
+                view();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -82,25 +74,11 @@ namespace Final_Year_Project
         {
             view();
         }
-        /*private void image_btn_Click(object sender, EventArgs e)
-        {
-            DialogResult dr = openFileDialog1.ShowDialog();
-
-            if(dr == DialogResult.OK)
-            {
-                picture = new Bitmap(openFileDialog1.FileName);
-                pictureBox.Image = picture;
-                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-
-            }
-        }*/
-
+      
         private void delete_btn_Click(object sender, EventArgs e)
         {
             try
             {
-                conn.Open();
-
                 DynamicParameters parameters = new DynamicParameters();
                 parameters.Add("@id", id_txtbox.Text);
 
@@ -111,10 +89,6 @@ namespace Final_Year_Project
             {
                 MessageBox.Show(ex.Message);
             }
-            finally
-            {
-                conn.Close();
-            }
         }
 
         private void users_dgv_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -122,13 +96,12 @@ namespace Final_Year_Project
             int rowIndex = e.RowIndex;
             id_txtbox.Text = users_dgv.Rows[rowIndex].Cells[0].Value.ToString();
             firstname_txtbox.Text = users_dgv.Rows[rowIndex].Cells[1].Value.ToString();
-            lastname_txtbox.Text = users_dgv.Rows[rowIndex].Cells[2].Value.ToString();
-            username_txtbox.Text = users_dgv.Rows[rowIndex].Cells[3].Value.ToString();
-            password_txtbox.Text = users_dgv.Rows[rowIndex].Cells[4].Value.ToString();
-            contact_txtbox.Text = users_dgv.Rows[rowIndex].Cells[5].Value.ToString();
-            email_txtbox.Text = users_dgv.Rows[rowIndex].Cells[6].Value.ToString();
-            gender_dd.Text = users_dgv.Rows[rowIndex].Cells[7].Value.ToString();
-            usertype_dd.Text = users_dgv.Rows[rowIndex].Cells[8].Value.ToString();
+            username_txtbox.Text = users_dgv.Rows[rowIndex].Cells[2].Value.ToString();
+            password_txtbox.Text = users_dgv.Rows[rowIndex].Cells[3].Value.ToString();
+            contact_txtbox.Text = users_dgv.Rows[rowIndex].Cells[4].Value.ToString();
+            email_txtbox.Text = users_dgv.Rows[rowIndex].Cells[5].Value.ToString();
+            gender_dd.Text = users_dgv.Rows[rowIndex].Cells[6].Value.ToString();
+            usertype_dd.Text = users_dgv.Rows[rowIndex].Cells[7].Value.ToString();
         }
 
         private void close_btn_Click(object sender, EventArgs e)

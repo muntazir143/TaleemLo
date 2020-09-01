@@ -31,16 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_admin_dashboard));
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.class_btn = new Bunifu.Framework.UI.BunifuTileButton();
+            this.feeVoucher_btn = new Bunifu.Framework.UI.BunifuTileButton();
+            this.feeStructure_btn = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.branches_btn = new Bunifu.Framework.UI.BunifuTileButton();
             this.school_btn = new Bunifu.Framework.UI.BunifuTileButton();
+            this.class_btn = new Bunifu.Framework.UI.BunifuTileButton();
             this.sections_btn = new Bunifu.Framework.UI.BunifuTileButton();
             this.users_btn = new Bunifu.Framework.UI.BunifuTileButton();
             this.teachers_btn = new Bunifu.Framework.UI.BunifuTileButton();
             this.students_btn = new Bunifu.Framework.UI.BunifuTileButton();
-            this.feeStructure_btn = new Bunifu.Framework.UI.BunifuTileButton();
-            this.feeVoucher_btn = new Bunifu.Framework.UI.BunifuTileButton();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel3
@@ -58,32 +58,52 @@
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(133, 37);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(23, 65);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(828, 35);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(940, 35);
             this.bunifuSeparator1.TabIndex = 15;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
             // 
-            // class_btn
+            // feeVoucher_btn
             // 
-            this.class_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
-            this.class_btn.color = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
-            this.class_btn.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(78)))));
-            this.class_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.class_btn.Font = new System.Drawing.Font("Century Gothic", 15.75F);
-            this.class_btn.ForeColor = System.Drawing.Color.White;
-            this.class_btn.Image = global::Final_Year_Project.Properties.Resources.icons8_classroom_200px;
-            this.class_btn.ImagePosition = 20;
-            this.class_btn.ImageZoom = 50;
-            this.class_btn.LabelPosition = 41;
-            this.class_btn.LabelText = "Class";
-            this.class_btn.Location = new System.Drawing.Point(241, 293);
-            this.class_btn.Margin = new System.Windows.Forms.Padding(6);
-            this.class_btn.Name = "class_btn";
-            this.class_btn.Size = new System.Drawing.Size(128, 129);
-            this.class_btn.TabIndex = 23;
-            this.class_btn.Click += new System.EventHandler(this.class_btn_Click);
+            this.feeVoucher_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            this.feeVoucher_btn.color = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            this.feeVoucher_btn.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(78)))));
+            this.feeVoucher_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.feeVoucher_btn.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.feeVoucher_btn.ForeColor = System.Drawing.Color.White;
+            this.feeVoucher_btn.Image = ((System.Drawing.Image)(resources.GetObject("feeVoucher_btn.Image")));
+            this.feeVoucher_btn.ImagePosition = 18;
+            this.feeVoucher_btn.ImageZoom = 50;
+            this.feeVoucher_btn.LabelPosition = 38;
+            this.feeVoucher_btn.LabelText = "Fee";
+            this.feeVoucher_btn.Location = new System.Drawing.Point(814, 321);
+            this.feeVoucher_btn.Margin = new System.Windows.Forms.Padding(6);
+            this.feeVoucher_btn.Name = "feeVoucher_btn";
+            this.feeVoucher_btn.Size = new System.Drawing.Size(128, 129);
+            this.feeVoucher_btn.TabIndex = 28;
+            this.feeVoucher_btn.Click += new System.EventHandler(this.feeVoucher_btn_Click);
+            // 
+            // feeStructure_btn
+            // 
+            this.feeStructure_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            this.feeStructure_btn.color = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            this.feeStructure_btn.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(78)))));
+            this.feeStructure_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.feeStructure_btn.Font = new System.Drawing.Font("Century Gothic", 13.5F);
+            this.feeStructure_btn.ForeColor = System.Drawing.Color.White;
+            this.feeStructure_btn.Image = ((System.Drawing.Image)(resources.GetObject("feeStructure_btn.Image")));
+            this.feeStructure_btn.ImagePosition = 17;
+            this.feeStructure_btn.ImageZoom = 50;
+            this.feeStructure_btn.LabelPosition = 36;
+            this.feeStructure_btn.LabelText = "Fee Structure";
+            this.feeStructure_btn.Location = new System.Drawing.Point(814, 145);
+            this.feeStructure_btn.Margin = new System.Windows.Forms.Padding(6);
+            this.feeStructure_btn.Name = "feeStructure_btn";
+            this.feeStructure_btn.Size = new System.Drawing.Size(128, 129);
+            this.feeStructure_btn.TabIndex = 27;
+            this.feeStructure_btn.Click += new System.EventHandler(this.feeStructure_btn_Click);
             // 
             // bunifuTileButton1
             // 
@@ -93,12 +113,12 @@
             this.bunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTileButton1.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.bunifuTileButton1.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton1.Image = global::Final_Year_Project.Properties.Resources.icons8_attendance_240px;
+            this.bunifuTileButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton1.Image")));
             this.bunifuTileButton1.ImagePosition = 18;
             this.bunifuTileButton1.ImageZoom = 50;
             this.bunifuTileButton1.LabelPosition = 38;
             this.bunifuTileButton1.LabelText = "Attendance";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(628, 293);
+            this.bunifuTileButton1.Location = new System.Drawing.Point(626, 321);
             this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuTileButton1.Name = "bunifuTileButton1";
             this.bunifuTileButton1.Size = new System.Drawing.Size(128, 129);
@@ -118,7 +138,7 @@
             this.branches_btn.ImageZoom = 50;
             this.branches_btn.LabelPosition = 41;
             this.branches_btn.LabelText = "Branches";
-            this.branches_btn.Location = new System.Drawing.Point(628, 117);
+            this.branches_btn.Location = new System.Drawing.Point(626, 145);
             this.branches_btn.Margin = new System.Windows.Forms.Padding(6);
             this.branches_btn.Name = "branches_btn";
             this.branches_btn.Size = new System.Drawing.Size(128, 129);
@@ -138,12 +158,32 @@
             this.school_btn.ImageZoom = 50;
             this.school_btn.LabelPosition = 41;
             this.school_btn.LabelText = "School";
-            this.school_btn.Location = new System.Drawing.Point(437, 117);
+            this.school_btn.Location = new System.Drawing.Point(435, 145);
             this.school_btn.Margin = new System.Windows.Forms.Padding(6);
             this.school_btn.Name = "school_btn";
             this.school_btn.Size = new System.Drawing.Size(128, 129);
             this.school_btn.TabIndex = 24;
             this.school_btn.Click += new System.EventHandler(this.school_btn_Click);
+            // 
+            // class_btn
+            // 
+            this.class_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            this.class_btn.color = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            this.class_btn.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(78)))));
+            this.class_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.class_btn.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.class_btn.ForeColor = System.Drawing.Color.White;
+            this.class_btn.Image = ((System.Drawing.Image)(resources.GetObject("class_btn.Image")));
+            this.class_btn.ImagePosition = 20;
+            this.class_btn.ImageZoom = 50;
+            this.class_btn.LabelPosition = 41;
+            this.class_btn.LabelText = "Class";
+            this.class_btn.Location = new System.Drawing.Point(239, 321);
+            this.class_btn.Margin = new System.Windows.Forms.Padding(6);
+            this.class_btn.Name = "class_btn";
+            this.class_btn.Size = new System.Drawing.Size(128, 129);
+            this.class_btn.TabIndex = 23;
+            this.class_btn.Click += new System.EventHandler(this.class_btn_Click);
             // 
             // sections_btn
             // 
@@ -158,7 +198,7 @@
             this.sections_btn.ImageZoom = 50;
             this.sections_btn.LabelPosition = 41;
             this.sections_btn.LabelText = "Sections";
-            this.sections_btn.Location = new System.Drawing.Point(48, 293);
+            this.sections_btn.Location = new System.Drawing.Point(46, 321);
             this.sections_btn.Margin = new System.Windows.Forms.Padding(6);
             this.sections_btn.Name = "sections_btn";
             this.sections_btn.Size = new System.Drawing.Size(128, 129);
@@ -173,12 +213,12 @@
             this.users_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.users_btn.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.users_btn.ForeColor = System.Drawing.Color.White;
-            this.users_btn.Image = global::Final_Year_Project.Properties.Resources.icons8_user_groups_100px_1;
+            this.users_btn.Image = ((System.Drawing.Image)(resources.GetObject("users_btn.Image")));
             this.users_btn.ImagePosition = 20;
             this.users_btn.ImageZoom = 50;
             this.users_btn.LabelPosition = 41;
             this.users_btn.LabelText = "Users";
-            this.users_btn.Location = new System.Drawing.Point(48, 117);
+            this.users_btn.Location = new System.Drawing.Point(46, 145);
             this.users_btn.Margin = new System.Windows.Forms.Padding(6);
             this.users_btn.Name = "users_btn";
             this.users_btn.Size = new System.Drawing.Size(128, 129);
@@ -193,12 +233,12 @@
             this.teachers_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.teachers_btn.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.teachers_btn.ForeColor = System.Drawing.Color.White;
-            this.teachers_btn.Image = global::Final_Year_Project.Properties.Resources.icons8_training_64px;
+            this.teachers_btn.Image = ((System.Drawing.Image)(resources.GetObject("teachers_btn.Image")));
             this.teachers_btn.ImagePosition = 20;
             this.teachers_btn.ImageZoom = 50;
             this.teachers_btn.LabelPosition = 41;
             this.teachers_btn.LabelText = "Teachers";
-            this.teachers_btn.Location = new System.Drawing.Point(437, 293);
+            this.teachers_btn.Location = new System.Drawing.Point(435, 321);
             this.teachers_btn.Margin = new System.Windows.Forms.Padding(6);
             this.teachers_btn.Name = "teachers_btn";
             this.teachers_btn.Size = new System.Drawing.Size(128, 129);
@@ -213,57 +253,17 @@
             this.students_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.students_btn.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.students_btn.ForeColor = System.Drawing.Color.White;
-            this.students_btn.Image = global::Final_Year_Project.Properties.Resources.icons8_student_male_100px;
+            this.students_btn.Image = ((System.Drawing.Image)(resources.GetObject("students_btn.Image")));
             this.students_btn.ImagePosition = 20;
             this.students_btn.ImageZoom = 50;
             this.students_btn.LabelPosition = 41;
             this.students_btn.LabelText = "Students";
-            this.students_btn.Location = new System.Drawing.Point(241, 117);
+            this.students_btn.Location = new System.Drawing.Point(239, 145);
             this.students_btn.Margin = new System.Windows.Forms.Padding(6);
             this.students_btn.Name = "students_btn";
             this.students_btn.Size = new System.Drawing.Size(128, 129);
             this.students_btn.TabIndex = 18;
             this.students_btn.Click += new System.EventHandler(this.students_btn_Click);
-            // 
-            // feeStructure_btn
-            // 
-            this.feeStructure_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
-            this.feeStructure_btn.color = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
-            this.feeStructure_btn.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(78)))));
-            this.feeStructure_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.feeStructure_btn.Font = new System.Drawing.Font("Century Gothic", 13.5F);
-            this.feeStructure_btn.ForeColor = System.Drawing.Color.White;
-            this.feeStructure_btn.Image = ((System.Drawing.Image)(resources.GetObject("feeStructure_btn.Image")));
-            this.feeStructure_btn.ImagePosition = 17;
-            this.feeStructure_btn.ImageZoom = 50;
-            this.feeStructure_btn.LabelPosition = 36;
-            this.feeStructure_btn.LabelText = "Fee Structure";
-            this.feeStructure_btn.Location = new System.Drawing.Point(816, 117);
-            this.feeStructure_btn.Margin = new System.Windows.Forms.Padding(6);
-            this.feeStructure_btn.Name = "feeStructure_btn";
-            this.feeStructure_btn.Size = new System.Drawing.Size(128, 129);
-            this.feeStructure_btn.TabIndex = 27;
-            this.feeStructure_btn.Click += new System.EventHandler(this.feeStructure_btn_Click);
-            // 
-            // feeVoucher_btn
-            // 
-            this.feeVoucher_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
-            this.feeVoucher_btn.color = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
-            this.feeVoucher_btn.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(78)))));
-            this.feeVoucher_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.feeVoucher_btn.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.feeVoucher_btn.ForeColor = System.Drawing.Color.White;
-            this.feeVoucher_btn.Image = global::Final_Year_Project.Properties.Resources.icons8_attendance_240px;
-            this.feeVoucher_btn.ImagePosition = 18;
-            this.feeVoucher_btn.ImageZoom = 50;
-            this.feeVoucher_btn.LabelPosition = 38;
-            this.feeVoucher_btn.LabelText = "Fee";
-            this.feeVoucher_btn.Location = new System.Drawing.Point(816, 293);
-            this.feeVoucher_btn.Margin = new System.Windows.Forms.Padding(6);
-            this.feeVoucher_btn.Name = "feeVoucher_btn";
-            this.feeVoucher_btn.Size = new System.Drawing.Size(128, 129);
-            this.feeVoucher_btn.TabIndex = 28;
-            this.feeVoucher_btn.Click += new System.EventHandler(this.feeVoucher_btn_Click);
             // 
             // uc_admin_dashboard
             // 

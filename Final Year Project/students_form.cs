@@ -156,7 +156,7 @@ namespace Final_Year_Project
             {
                 //conn.Open();
                 
-                string insert = "insert into Students(RollNo,Name,FathersName,Gender,DOB,Mobile,AdmissionDate,ClassID,SectionID,Image) values(@RollNo,@Name,@FathersName,@Gender,@DOB,@Mobile,@AdmissionDate,@ClassID,@SectionID,@Image)";
+                string insert = "insert into Students(RollNo,Name,FathersName,Gender,DOB,Mobile,AdmissionDate,ClassID,SectionID,Image,StdPassword) values(@RollNo,@Name,@FathersName,@Gender,@DOB,@Mobile,@AdmissionDate,@ClassID,@SectionID,@Image,@StdPassword)";
                 SqlCommand cmd = new SqlCommand(insert, conn);
                 cmd.Parameters.AddWithValue("@RollNo", rollno_txtbox.Text.Trim());
                 cmd.Parameters.AddWithValue("@Name", name_txtbox.Text.Trim());
@@ -167,6 +167,7 @@ namespace Final_Year_Project
                 cmd.Parameters.AddWithValue("@AdmissionDate", admissionDate.Value);
                 cmd.Parameters.AddWithValue("@ClassID", class_cmbbox.SelectedValue);
                 cmd.Parameters.AddWithValue("@SectionID", section_cmbbox.SelectedValue);
+                cmd.Parameters.AddWithValue("@StdPassword", "pass123");
                 cmd.Parameters.AddWithValue("@Image", imageData);
                 cmd.ExecuteNonQuery();
                 Clear();

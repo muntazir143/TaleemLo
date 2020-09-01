@@ -67,6 +67,12 @@
     <Compile Include="attendance_form.Designer.cs">
       <DependentUpon>attendance_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="FeeReportsViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeeReportsViewer.Designer.cs">
+      <DependentUpon>FeeReportsViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="fees_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,8 +139,6 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
-    <Compile Include="loginform_dbmethods.cs" />
-    <Compile Include="loginform_gettersetters.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="school_form.cs">
@@ -168,6 +172,12 @@
     <Compile Include="teacher_dashboard.Designer.cs">
       <DependentUpon>teacher_dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="uc_about_school.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_about_school.Designer.cs">
+      <DependentUpon>uc_about_school.cs</DependentUpon>
+    </Compile>
     <Compile Include="uc_admin_dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -196,6 +206,9 @@
     </Compile>
     <EmbeddedResource Include="attendance_form.resx">
       <DependentUpon>attendance_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeeReportsViewer.resx">
+      <DependentUpon>FeeReportsViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fees_form.resx">
       <DependentUpon>fees_form.cs</DependentUpon>
@@ -249,6 +262,9 @@
     <EmbeddedResource Include="teacher_dashboard.resx">
       <DependentUpon>teacher_dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="uc_about_school.resx">
+      <DependentUpon>uc_about_school.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="uc_admin_dashboard.resx">
       <DependentUpon>uc_admin_dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,24 +295,7 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_user_groups_100px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8_student_male_100px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_training_64px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_classroom_200px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\icons8_attendance_240px.png" />
-    <Content Include="Resources\icons8_combo_chart_50px.png" />
-    <Content Include="Resources\icons8_content_50px.png" />
-    <Content Include="Resources\icons8_c_sharp_logo_50px.png" />
-    <Content Include="Resources\icons8_info_50px.png" />
-    <Content Include="Resources\icons8_logout_rounded_up_50px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

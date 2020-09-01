@@ -68,15 +68,17 @@ namespace Final_Year_Project
               
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
-                feeVoucherID.DataPropertyName = "FeeVoucherID";
-                name.DataPropertyName = "Name";
+                //feeVoucherID.DataPropertyName = "FeeVoucherID";
+                //RollNo.DataPropertyName = "RollNo";
+                //name.DataPropertyName = "Name";
                 feevoucher_dgv.DataSource = dt;
-                string monthlyFee = "select MonthlyFee as 'Monthly Fee' from FeeStructure where FeeStructure.ClassID='"+ class_cmbbox.SelectedValue + "'";
+                string monthlyFee = "select MonthlyFee,LateFee from FeeStructure where FeeStructure.ClassID='"+ class_cmbbox.SelectedValue + "'";
                 SqlCommand cmd = new SqlCommand(monthlyFee, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
                     monthly_txtbox.Text = reader.GetValue(0).ToString();
+                    late_txtbox.Text = reader.GetValue(1).ToString();
                 }
                 
 
@@ -85,6 +87,46 @@ namespace Final_Year_Project
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void save_btn_Click(object sender, EventArgs e)
+        {
+            byte admissionFeeStatus = admissionFee_checkbox.Checked ? Convert.ToByte(1) : Convert.ToByte(0);
+            byte miscellaneousFeeStatus = miscellaneousFee_checkbox.Checked ? Convert.ToByte(1) : Convert.ToByte(0);
+            foreach (DataGridViewRow row in feevoucher_dgv.Rows)
+            {
+                float discount;
+                if(row.Cells["discount"].Value == null || row.Cells["discount"].Value.ToString() == "")
+                {
+                    discount = 0;
+                }
+                else
+                {
+                    discount = Convert.ToSingle(row.Cells["discount"].Value.ToString());
+                }
+                string save = "insert into FeeVoucher values(@RollNo,@ClassID,@Month,@Year,@DueDate,@PaidWithInDueDate,@MonthlyFeeStatus,@AdmissionFeeStatus,@MiscellaneousFeeStatus,@Discount)";
+                SqlCommand cmd = new SqlCommand(save, conn);
+                cmd.Parameters.AddWithValue("@RollNo", row.Cells["RollNo"].Value.ToString());
+                //cmd.Parameters.AddWithValue("@AttendanceStatus", row.Cells["Attendance"].Value.ToString());
+                cmd.Parameters.AddWithValue("@ClassID", class_cmbbox.SelectedValue);
+                cmd.Parameters.AddWithValue("@Month", month_year.Value.Month);
+                cmd.Parameters.AddWithValue("@Year", month_year.Value.Year);
+                cmd.Parameters.AddWithValue("@DueDate", duedate.Value);
+                cmd.Parameters.AddWithValue("@PaidWithInDueDate", 0);
+                cmd.Parameters.AddWithValue("@MonthlyFeeStatus", 0);
+                cmd.Parameters.AddWithValue("@AdmissionFeeStatus", 0);
+                cmd.Parameters.AddWithValue("@MiscellaneousFeeStatus", 0);
+                cmd.Parameters.AddWithValue("@Discount", discount);
+
+                cmd.ExecuteNonQuery();
+
+            }
+        }
+
+        private void reports_btn_Click(object sender, EventArgs e)
+        {
+            FeeReportsViewer feeReportsViewer = new FeeReportsViewer();
+            feeReportsViewer.Show();
         }
     }
 }

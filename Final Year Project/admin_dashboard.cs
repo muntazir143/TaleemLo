@@ -38,14 +38,25 @@ namespace Final_Year_Project
 
         private void close_btn_Click(object sender, EventArgs e)
         {
-            login login = new login();
-            login.Show();
-            this.Hide();
+            Application.Exit();
         }
 
         private void admin_dashboard_Load(object sender, EventArgs e)
         {
             lbl_loggedin.Text = login.loggedin_username;
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            uc_about_school about_School = new uc_about_school();
+            ChangeablePanels(about_School);
+        }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+            login login = new login();
+            login.Show();
+            this.Hide();
         }
     }
 }

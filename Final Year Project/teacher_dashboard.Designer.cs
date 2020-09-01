@@ -34,11 +34,13 @@
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.SidePanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.uc_overview_btn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.uc_dashboard_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.lbl_loggedin = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.close_btn = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -47,16 +49,13 @@
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.close_btn = new Bunifu.Framework.UI.BunifuImageButton();
-            this.lbl_loggedin = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.SidePanel.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -76,7 +75,6 @@
             this.SidePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SidePanel.BackgroundImage")));
             this.SidePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SidePanel.Controls.Add(this.uc_overview_btn);
-            this.SidePanel.Controls.Add(this.bunifuFlatButton4);
             this.SidePanel.Controls.Add(this.bunifuFlatButton3);
             this.SidePanel.Controls.Add(this.bunifuFlatButton2);
             this.SidePanel.Controls.Add(this.uc_dashboard_btn);
@@ -126,40 +124,6 @@
             this.uc_overview_btn.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uc_overview_btn.Click += new System.EventHandler(this.uc_overview_btn_Click);
             // 
-            // bunifuFlatButton4
-            // 
-            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(78)))));
-            this.bunifuFlatButton4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton4.BorderRadius = 0;
-            this.bunifuFlatButton4.ButtonText = "About Developers";
-            this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton4.Iconimage")));
-            this.bunifuFlatButton4.Iconimage_right = null;
-            this.bunifuFlatButton4.Iconimage_right_Selected = null;
-            this.bunifuFlatButton4.Iconimage_Selected = null;
-            this.bunifuFlatButton4.IconMarginLeft = 0;
-            this.bunifuFlatButton4.IconMarginRight = 0;
-            this.bunifuFlatButton4.IconRightVisible = true;
-            this.bunifuFlatButton4.IconRightZoom = 0D;
-            this.bunifuFlatButton4.IconVisible = true;
-            this.bunifuFlatButton4.IconZoom = 90D;
-            this.bunifuFlatButton4.IsTab = true;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(0, 301);
-            this.bunifuFlatButton4.Name = "bunifuFlatButton4";
-            this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(78)))));
-            this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton4.selected = false;
-            this.bunifuFlatButton4.Size = new System.Drawing.Size(200, 48);
-            this.bunifuFlatButton4.TabIndex = 3;
-            this.bunifuFlatButton4.Text = "About Developers";
-            this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
             // bunifuFlatButton3
             // 
             this.bunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(78)))));
@@ -181,7 +145,7 @@
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 90D;
             this.bunifuFlatButton3.IsTab = true;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(0, 364);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(0, 292);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(78)))));
@@ -193,6 +157,7 @@
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton3.Click += new System.EventHandler(this.bunifuFlatButton3_Click);
             // 
             // bunifuFlatButton2
             // 
@@ -227,6 +192,7 @@
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
             // uc_dashboard_btn
             // 
@@ -282,6 +248,44 @@
             this.bunifuGradientPanel2.Quality = 10;
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(1000, 119);
             this.bunifuGradientPanel2.TabIndex = 2;
+            // 
+            // lbl_loggedin
+            // 
+            this.lbl_loggedin.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbl_loggedin.AutoSize = true;
+            this.lbl_loggedin.BackColor = System.Drawing.Color.White;
+            this.lbl_loggedin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_loggedin.Location = new System.Drawing.Point(884, 88);
+            this.lbl_loggedin.Name = "lbl_loggedin";
+            this.lbl_loggedin.Size = new System.Drawing.Size(0, 18);
+            this.lbl_loggedin.TabIndex = 9;
+            // 
+            // bunifuCustomLabel3
+            // 
+            this.bunifuCustomLabel3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.bunifuCustomLabel3.AutoSize = true;
+            this.bunifuCustomLabel3.BackColor = System.Drawing.Color.White;
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(831, 88);
+            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(47, 18);
+            this.bunifuCustomLabel3.TabIndex = 8;
+            this.bunifuCustomLabel3.Text = "User :";
+            // 
+            // close_btn
+            // 
+            this.close_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.close_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            this.close_btn.Image = ((System.Drawing.Image)(resources.GetObject("close_btn.Image")));
+            this.close_btn.ImageActive = null;
+            this.close_btn.Location = new System.Drawing.Point(956, 12);
+            this.close_btn.Name = "close_btn";
+            this.close_btn.Size = new System.Drawing.Size(32, 34);
+            this.close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.close_btn.TabIndex = 5;
+            this.close_btn.TabStop = false;
+            this.close_btn.Zoom = 10;
+            this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
             // 
             // bunifuCustomLabel2
             // 
@@ -379,44 +383,6 @@
             this.MainPanel.Size = new System.Drawing.Size(1000, 567);
             this.MainPanel.TabIndex = 5;
             // 
-            // close_btn
-            // 
-            this.close_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.close_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
-            this.close_btn.Image = ((System.Drawing.Image)(resources.GetObject("close_btn.Image")));
-            this.close_btn.ImageActive = null;
-            this.close_btn.Location = new System.Drawing.Point(956, 12);
-            this.close_btn.Name = "close_btn";
-            this.close_btn.Size = new System.Drawing.Size(32, 34);
-            this.close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.close_btn.TabIndex = 5;
-            this.close_btn.TabStop = false;
-            this.close_btn.Zoom = 10;
-            this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
-            // 
-            // lbl_loggedin
-            // 
-            this.lbl_loggedin.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lbl_loggedin.AutoSize = true;
-            this.lbl_loggedin.BackColor = System.Drawing.Color.White;
-            this.lbl_loggedin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_loggedin.Location = new System.Drawing.Point(884, 88);
-            this.lbl_loggedin.Name = "lbl_loggedin";
-            this.lbl_loggedin.Size = new System.Drawing.Size(0, 18);
-            this.lbl_loggedin.TabIndex = 9;
-            // 
-            // bunifuCustomLabel3
-            // 
-            this.bunifuCustomLabel3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.BackColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(831, 88);
-            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(47, 18);
-            this.bunifuCustomLabel3.TabIndex = 8;
-            this.bunifuCustomLabel3.Text = "User :";
-            // 
             // teacher_dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -434,12 +400,12 @@
             this.SidePanel.ResumeLayout(false);
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuGradientPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -450,7 +416,6 @@
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuGradientPanel SidePanel;
         private Bunifu.Framework.UI.BunifuFlatButton uc_overview_btn;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton uc_dashboard_btn;

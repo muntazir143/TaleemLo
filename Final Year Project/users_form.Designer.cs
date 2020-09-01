@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(users_form));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -41,8 +41,6 @@
             this.id_txtbox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.firstname_txtbox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label3 = new System.Windows.Forms.Label();
-            this.lastname_txtbox = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.label4 = new System.Windows.Forms.Label();
             this.username_txtbox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label5 = new System.Windows.Forms.Label();
             this.password_txtbox = new Bunifu.Framework.UI.BunifuMetroTextbox();
@@ -53,12 +51,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.users_dgv = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.add_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.update_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.delete_btn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.search_txt = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.view_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.gender_dd = new System.Windows.Forms.ComboBox();
@@ -163,38 +159,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(42, 143);
+            this.label3.Location = new System.Drawing.Point(63, 143);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 16);
+            this.label3.Size = new System.Drawing.Size(47, 16);
             this.label3.TabIndex = 5;
-            this.label3.Text = "First Name";
-            // 
-            // lastname_txtbox
-            // 
-            this.lastname_txtbox.BorderColorFocused = System.Drawing.Color.Blue;
-            this.lastname_txtbox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lastname_txtbox.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.lastname_txtbox.BorderThickness = 3;
-            this.lastname_txtbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.lastname_txtbox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.lastname_txtbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lastname_txtbox.isPassword = false;
-            this.lastname_txtbox.Location = new System.Drawing.Point(144, 174);
-            this.lastname_txtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.lastname_txtbox.Name = "lastname_txtbox";
-            this.lastname_txtbox.Size = new System.Drawing.Size(250, 35);
-            this.lastname_txtbox.TabIndex = 8;
-            this.lastname_txtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(42, 191);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 16);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Last Name";
+            this.label3.Text = "Name";
             // 
             // username_txtbox
             // 
@@ -206,7 +175,7 @@
             this.username_txtbox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.username_txtbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.username_txtbox.isPassword = false;
-            this.username_txtbox.Location = new System.Drawing.Point(144, 220);
+            this.username_txtbox.Location = new System.Drawing.Point(144, 177);
             this.username_txtbox.Margin = new System.Windows.Forms.Padding(4);
             this.username_txtbox.Name = "username_txtbox";
             this.username_txtbox.Size = new System.Drawing.Size(250, 35);
@@ -217,7 +186,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(46, 236);
+            this.label5.Location = new System.Drawing.Point(46, 193);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 16);
             this.label5.TabIndex = 9;
@@ -233,7 +202,7 @@
             this.password_txtbox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.password_txtbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.password_txtbox.isPassword = false;
-            this.password_txtbox.Location = new System.Drawing.Point(144, 266);
+            this.password_txtbox.Location = new System.Drawing.Point(144, 223);
             this.password_txtbox.Margin = new System.Windows.Forms.Padding(4);
             this.password_txtbox.Name = "password_txtbox";
             this.password_txtbox.Size = new System.Drawing.Size(250, 35);
@@ -244,7 +213,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(50, 281);
+            this.label6.Location = new System.Drawing.Point(50, 238);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 16);
             this.label6.TabIndex = 11;
@@ -260,7 +229,7 @@
             this.contact_txtbox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.contact_txtbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.contact_txtbox.isPassword = false;
-            this.contact_txtbox.Location = new System.Drawing.Point(144, 312);
+            this.contact_txtbox.Location = new System.Drawing.Point(144, 269);
             this.contact_txtbox.Margin = new System.Windows.Forms.Padding(4);
             this.contact_txtbox.Name = "contact_txtbox";
             this.contact_txtbox.Size = new System.Drawing.Size(250, 35);
@@ -271,7 +240,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(39, 326);
+            this.label7.Location = new System.Drawing.Point(39, 283);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 16);
             this.label7.TabIndex = 13;
@@ -287,7 +256,7 @@
             this.email_txtbox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.email_txtbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.email_txtbox.isPassword = false;
-            this.email_txtbox.Location = new System.Drawing.Point(144, 358);
+            this.email_txtbox.Location = new System.Drawing.Point(144, 315);
             this.email_txtbox.Margin = new System.Windows.Forms.Padding(4);
             this.email_txtbox.Name = "email_txtbox";
             this.email_txtbox.Size = new System.Drawing.Size(250, 35);
@@ -298,7 +267,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(66, 371);
+            this.label8.Location = new System.Drawing.Point(66, 328);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 16);
             this.label8.TabIndex = 15;
@@ -316,40 +285,30 @@
             // 
             // users_dgv
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.users_dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.users_dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.users_dgv.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.users_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.users_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.users_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.users_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.users_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.users_dgv.DoubleBuffered = true;
             this.users_dgv.EnableHeadersVisualStyles = false;
-            this.users_dgv.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.users_dgv.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.users_dgv.Location = new System.Drawing.Point(411, 174);
+            this.users_dgv.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            this.users_dgv.HeaderForeColor = System.Drawing.Color.White;
+            this.users_dgv.Location = new System.Drawing.Point(411, 82);
             this.users_dgv.Name = "users_dgv";
             this.users_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.users_dgv.Size = new System.Drawing.Size(601, 407);
             this.users_dgv.TabIndex = 20;
             this.users_dgv.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.users_dgv_RowHeaderMouseDoubleClick);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(418, 128);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 16);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Search";
             // 
             // label11
             // 
@@ -382,7 +341,7 @@
             this.add_btn.IconVisible = true;
             this.add_btn.IconZoom = 90D;
             this.add_btn.IsTab = false;
-            this.add_btn.Location = new System.Drawing.Point(411, 623);
+            this.add_btn.Location = new System.Drawing.Point(401, 543);
             this.add_btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.add_btn.Name = "add_btn";
             this.add_btn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
@@ -418,7 +377,7 @@
             this.update_btn.IconVisible = true;
             this.update_btn.IconZoom = 90D;
             this.update_btn.IsTab = false;
-            this.update_btn.Location = new System.Drawing.Point(566, 623);
+            this.update_btn.Location = new System.Drawing.Point(556, 543);
             this.update_btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.update_btn.Name = "update_btn";
             this.update_btn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
@@ -453,7 +412,7 @@
             this.delete_btn.IconVisible = true;
             this.delete_btn.IconZoom = 90D;
             this.delete_btn.IsTab = false;
-            this.delete_btn.Location = new System.Drawing.Point(726, 623);
+            this.delete_btn.Location = new System.Drawing.Point(716, 543);
             this.delete_btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.delete_btn.Name = "delete_btn";
             this.delete_btn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
@@ -467,23 +426,6 @@
             this.delete_btn.Textcolor = System.Drawing.Color.White;
             this.delete_btn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
-            // 
-            // search_txt
-            // 
-            this.search_txt.BorderColorFocused = System.Drawing.Color.Blue;
-            this.search_txt.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.search_txt.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.search_txt.BorderThickness = 3;
-            this.search_txt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.search_txt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.search_txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.search_txt.isPassword = false;
-            this.search_txt.Location = new System.Drawing.Point(487, 119);
-            this.search_txt.Margin = new System.Windows.Forms.Padding(4);
-            this.search_txt.Name = "search_txt";
-            this.search_txt.Size = new System.Drawing.Size(525, 40);
-            this.search_txt.TabIndex = 29;
-            this.search_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // view_btn
             // 
@@ -506,7 +448,7 @@
             this.view_btn.IconVisible = true;
             this.view_btn.IconZoom = 90D;
             this.view_btn.IsTab = false;
-            this.view_btn.Location = new System.Drawing.Point(882, 623);
+            this.view_btn.Location = new System.Drawing.Point(872, 543);
             this.view_btn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.view_btn.Name = "view_btn";
             this.view_btn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
@@ -541,7 +483,6 @@
             this.usertype_dd.FormattingEnabled = true;
             this.usertype_dd.Items.AddRange(new object[] {
             "Admin",
-            "Principal",
             "Teacher"});
             this.usertype_dd.Location = new System.Drawing.Point(144, 461);
             this.usertype_dd.Name = "usertype_dd";
@@ -553,16 +494,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1034, 700);
+            this.ClientSize = new System.Drawing.Size(1034, 621);
             this.Controls.Add(this.usertype_dd);
             this.Controls.Add(this.gender_dd);
             this.Controls.Add(this.view_btn);
-            this.Controls.Add(this.search_txt);
             this.Controls.Add(this.delete_btn);
             this.Controls.Add(this.update_btn);
             this.Controls.Add(this.add_btn);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.users_dgv);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.email_txtbox);
@@ -573,8 +512,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.username_txtbox);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.lastname_txtbox);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.firstname_txtbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.id_txtbox);
@@ -613,17 +550,13 @@
         private System.Windows.Forms.Label label6;
         private Bunifu.Framework.UI.BunifuMetroTextbox username_txtbox;
         private System.Windows.Forms.Label label5;
-        private Bunifu.Framework.UI.BunifuMetroTextbox lastname_txtbox;
-        private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuMetroTextbox firstname_txtbox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label10;
         private Bunifu.Framework.UI.BunifuCustomDataGrid users_dgv;
         private System.Windows.Forms.Label label11;
         private Bunifu.Framework.UI.BunifuFlatButton delete_btn;
         private Bunifu.Framework.UI.BunifuFlatButton update_btn;
         private Bunifu.Framework.UI.BunifuFlatButton add_btn;
-        private Bunifu.Framework.UI.BunifuMetroTextbox search_txt;
         private Bunifu.Framework.UI.BunifuFlatButton view_btn;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ComboBox gender_dd;

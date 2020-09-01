@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.usertype_dd = new System.Windows.Forms.ComboBox();
             this.login_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.password_txt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -39,8 +40,9 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.username_txt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.usertype_dd = new System.Windows.Forms.ComboBox();
+            this.close_btn = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -52,6 +54,7 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.close_btn);
             this.bunifuGradientPanel1.Controls.Add(this.usertype_dd);
             this.bunifuGradientPanel1.Controls.Add(this.login_btn);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomLabel3);
@@ -69,6 +72,17 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(600, 400);
             this.bunifuGradientPanel1.TabIndex = 0;
+            // 
+            // usertype_dd
+            // 
+            this.usertype_dd.FormattingEnabled = true;
+            this.usertype_dd.Items.AddRange(new object[] {
+            "Admin",
+            "Teacher"});
+            this.usertype_dd.Location = new System.Drawing.Point(160, 286);
+            this.usertype_dd.Name = "usertype_dd";
+            this.usertype_dd.Size = new System.Drawing.Size(281, 21);
+            this.usertype_dd.TabIndex = 9;
             // 
             // login_btn
             // 
@@ -186,17 +200,20 @@
             this.bunifuDragControl1.TargetControl = null;
             this.bunifuDragControl1.Vertical = true;
             // 
-            // usertype_dd
+            // close_btn
             // 
-            this.usertype_dd.FormattingEnabled = true;
-            this.usertype_dd.Items.AddRange(new object[] {
-            "Admin",
-            "Principal",
-            "Teacher"});
-            this.usertype_dd.Location = new System.Drawing.Point(160, 286);
-            this.usertype_dd.Name = "usertype_dd";
-            this.usertype_dd.Size = new System.Drawing.Size(281, 21);
-            this.usertype_dd.TabIndex = 9;
+            this.close_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.close_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            this.close_btn.Image = ((System.Drawing.Image)(resources.GetObject("close_btn.Image")));
+            this.close_btn.ImageActive = null;
+            this.close_btn.Location = new System.Drawing.Point(556, 12);
+            this.close_btn.Name = "close_btn";
+            this.close_btn.Size = new System.Drawing.Size(32, 34);
+            this.close_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.close_btn.TabIndex = 10;
+            this.close_btn.TabStop = false;
+            this.close_btn.Zoom = 10;
+            this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
             // 
             // login
             // 
@@ -211,6 +228,7 @@
             this.Text = "Login";
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -227,6 +245,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton login_btn;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.ComboBox usertype_dd;
+        private Bunifu.Framework.UI.BunifuImageButton close_btn;
     }
 }
 
