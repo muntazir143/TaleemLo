@@ -172,6 +172,12 @@
     <Compile Include="teacher_dashboard.Designer.cs">
       <DependentUpon>teacher_dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="testreport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>testreport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="uc_about_school.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -261,6 +267,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="teacher_dashboard.resx">
       <DependentUpon>teacher_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testreport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>testreport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="uc_about_school.resx">
       <DependentUpon>uc_about_school.cs</DependentUpon>

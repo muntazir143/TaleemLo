@@ -30,7 +30,7 @@ namespace Final_Year_Project
             this.Close();
         }
 
-        public void FillClasses()
+        /*public void FillClasses()
         {
             try
             {
@@ -48,78 +48,40 @@ namespace Final_Year_Project
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
+        }*/
 
         private void fee_voucher_form_Load(object sender, EventArgs e)
         {
-            class_cmbbox.Items.Clear();
-            FillClasses();
+            //class_cmbbox.Items.Clear();
+            //FillClasses();
         }
 
         private void class_cmbbox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
-                feevoucher_dgv.DataSource = null;
 
-                string query = "select RollNo as 'Roll No', Name from Students inner join Classes on Classes.ClassID=Students.ClassID where Classes.ClassID='"+class_cmbbox.SelectedValue+"'";
-
-                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-              
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                //feeVoucherID.DataPropertyName = "FeeVoucherID";
-                //RollNo.DataPropertyName = "RollNo";
-                //name.DataPropertyName = "Name";
-                feevoucher_dgv.DataSource = dt;
-                string monthlyFee = "select MonthlyFee,LateFee from FeeStructure where FeeStructure.ClassID='"+ class_cmbbox.SelectedValue + "'";
-                SqlCommand cmd = new SqlCommand(monthlyFee, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    monthly_txtbox.Text = reader.GetValue(0).ToString();
-                    late_txtbox.Text = reader.GetValue(1).ToString();
-                }
-                
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
-        private void save_btn_Click(object sender, EventArgs e)
+        public void save_btn_Click(object sender, EventArgs e)
         {
-            byte admissionFeeStatus = admissionFee_checkbox.Checked ? Convert.ToByte(1) : Convert.ToByte(0);
-            byte miscellaneousFeeStatus = miscellaneousFee_checkbox.Checked ? Convert.ToByte(1) : Convert.ToByte(0);
-            foreach (DataGridViewRow row in feevoucher_dgv.Rows)
+            try
             {
-                float discount;
-                if(row.Cells["discount"].Value == null || row.Cells["discount"].Value.ToString() == "")
-                {
-                    discount = 0;
-                }
-                else
-                {
-                    discount = Convert.ToSingle(row.Cells["discount"].Value.ToString());
-                }
-                string save = "insert into FeeVoucher values(@RollNo,@ClassID,@Month,@Year,@DueDate,@PaidWithInDueDate,@MonthlyFeeStatus,@AdmissionFeeStatus,@MiscellaneousFeeStatus,@Discount)";
+                string save = "insert into FeeVoucher values(@RollNo,@ClassName,@Month,@Year,@DueDate,@MonthlyFee,@AdmissionFee,@LateFee,@MiscellaneousFee)";
                 SqlCommand cmd = new SqlCommand(save, conn);
-                cmd.Parameters.AddWithValue("@RollNo", row.Cells["RollNo"].Value.ToString());
-                //cmd.Parameters.AddWithValue("@AttendanceStatus", row.Cells["Attendance"].Value.ToString());
-                cmd.Parameters.AddWithValue("@ClassID", class_cmbbox.SelectedValue);
+                cmd.Parameters.AddWithValue("@RollNo", roll_txtbox.Text);
+                cmd.Parameters.AddWithValue("@ClassName", class_txtbox.Text);
                 cmd.Parameters.AddWithValue("@Month", month_year.Value.Month);
                 cmd.Parameters.AddWithValue("@Year", month_year.Value.Year);
                 cmd.Parameters.AddWithValue("@DueDate", duedate.Value);
-                cmd.Parameters.AddWithValue("@PaidWithInDueDate", 0);
-                cmd.Parameters.AddWithValue("@MonthlyFeeStatus", 0);
-                cmd.Parameters.AddWithValue("@AdmissionFeeStatus", 0);
-                cmd.Parameters.AddWithValue("@MiscellaneousFeeStatus", 0);
-                cmd.Parameters.AddWithValue("@Discount", discount);
-
+                cmd.Parameters.AddWithValue("@MonthlyFee", monthly_txtbox.Text);
+                cmd.Parameters.AddWithValue("@AdmissionFee", admissionFee_checkbox.Checked ? admissionFee_txtbox.Text : "0");
+                cmd.Parameters.AddWithValue("@LateFee", lateFee_checkbox.Checked ? lateFee_txtbox.Text : "0");
+                cmd.Parameters.AddWithValue("@MiscellaneousFee", miscellaneousFee_checkbox.Checked ? miscFee_txtbox.Text : "0");
                 cmd.ExecuteNonQuery();
-
+                view();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -127,6 +89,53 @@ namespace Final_Year_Project
         {
             FeeReportsViewer feeReportsViewer = new FeeReportsViewer();
             feeReportsViewer.Show();
+        }
+
+        public void ok_btn_Click(object sender, EventArgs e)
+        {
+            if(roll_txtbox.Text != "")
+            {
+                string query = "select s.Name, c.ClassName, f.MonthlyFee, f.LateFee, AdmissionFee, MiscellaneousFee from Students s inner join Classes c on s.ClassID = c.ClassID inner join FeeStructure f on c.ClassID = f.ClassID where s.RollNo = '" + roll_txtbox.Text + "'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    name_txtbox.Text = reader.GetValue(0).ToString();
+                    class_txtbox.Text = reader.GetValue(1).ToString();
+                    monthly_txtbox.Text = reader.GetValue(2).ToString();
+                    lateFee_txtbox.Text = reader.GetValue(3).ToString();
+                    admissionFee_txtbox.Text = reader.GetValue(4).ToString();
+                    miscFee_txtbox.Text = reader.GetValue(4).ToString();
+                    reader.Close();
+                    //string getData = "select ClassName as 'Class Name', Month, Year, DueDate as 'Due Date', MonthlyFee as 'Monthly Fee', LateFee as 'LateFee', AdmissionFee as 'Admission Fee', MiscellaneousFee as 'Miscellaneous Fee' from FeeVoucher where RollNo = '"+ roll_txtbox.Text  + "'";
+                    //SqlCommand cmd1 = new SqlCommand(getData, conn);
+                    //SqlDataAdapter adapter = new SqlDataAdapter(cmd1);
+                    //DataTable dt = new DataTable();
+                    //adapter.Fill(dt);
+                    //feevoucher_dgv.DataSource = dt;
+                    view();
+                }
+                else
+                {
+                    MessageBox.Show("Student not found...");
+                }
+            }
+            else
+            {
+                name_txtbox.Text = "";
+                class_txtbox.Text = "";
+                monthly_txtbox.Text = "";
+            }
+        }
+
+        public void view()
+        {
+            string getData = "select ClassName as 'Class Name', Month, Year, DueDate as 'Due Date', MonthlyFee as 'Monthly Fee', LateFee as 'LateFee', AdmissionFee as 'Admission Fee', MiscellaneousFee as 'Miscellaneous Fee' from FeeVoucher where RollNo = '" + roll_txtbox.Text + "'";
+            SqlCommand cmd1 = new SqlCommand(getData, conn);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd1);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            feevoucher_dgv.DataSource = dt;
         }
     }
 }
