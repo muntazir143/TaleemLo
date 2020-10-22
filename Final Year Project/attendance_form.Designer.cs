@@ -170,7 +170,6 @@
             // 
             // attendance_dgv
             // 
-            this.attendance_dgv.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.attendance_dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.attendance_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;

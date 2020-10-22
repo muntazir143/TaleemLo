@@ -16,5 +16,11 @@ namespace Final_Year_Project
         {
             InitializeComponent();
         }
+
+        private void bunifuTileButton1_Click(object sender, EventArgs e)
+        {
+            attendance_form attendance_Form = new attendance_form();
+            attendance_Form.Show();
+        }
     }
 }

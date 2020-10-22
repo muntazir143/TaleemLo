@@ -168,13 +168,13 @@ namespace Final_Year_Project
                     if (attendance_dgv.Rows.Count > 0)
                     {
                         int count = 0;
-                        foreach (DataGridViewRow row in attendance_dgv.Rows)
-                        {
-                            if (row.Cells["Attendance"].Value == null)
-                            {
-                                count++;
-                            }
-                        }
+                        //foreach (DataGridViewRow row in attendance_dgv.Rows)
+                       // {
+                            //if (row.Cells["Attendance"].Value == null)
+                            //{
+                            //    count++;
+                          //  }
+                        //}
                         if (count == 0)
                         {
                             foreach (DataGridViewRow row in attendance_dgv.Rows)

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fee_voucher_form));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -52,7 +52,6 @@
             this.miscellaneousFee_checkbox = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lateFee_checkbox = new System.Windows.Forms.CheckBox();
-            this.reports_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.roll_txtbox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.name_txtbox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label7 = new System.Windows.Forms.Label();
@@ -203,19 +202,19 @@
             // feevoucher_dgv
             // 
             this.feevoucher_dgv.AllowUserToAddRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.feevoucher_dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.feevoucher_dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.feevoucher_dgv.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.feevoucher_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.feevoucher_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.feevoucher_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.feevoucher_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.feevoucher_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.feevoucher_dgv.DoubleBuffered = true;
             this.feevoucher_dgv.EnableHeadersVisualStyles = false;
@@ -375,42 +374,6 @@
             this.lateFee_checkbox.TabIndex = 102;
             this.lateFee_checkbox.Text = "Late Fee";
             this.lateFee_checkbox.UseVisualStyleBackColor = true;
-            // 
-            // reports_btn
-            // 
-            this.reports_btn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.reports_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
-            this.reports_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.reports_btn.BorderRadius = 0;
-            this.reports_btn.ButtonText = "Reports";
-            this.reports_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.reports_btn.DisabledColor = System.Drawing.Color.Gray;
-            this.reports_btn.Iconcolor = System.Drawing.Color.Transparent;
-            this.reports_btn.Iconimage = ((System.Drawing.Image)(resources.GetObject("reports_btn.Iconimage")));
-            this.reports_btn.Iconimage_right = null;
-            this.reports_btn.Iconimage_right_Selected = null;
-            this.reports_btn.Iconimage_Selected = null;
-            this.reports_btn.IconMarginLeft = 0;
-            this.reports_btn.IconMarginRight = 0;
-            this.reports_btn.IconRightVisible = true;
-            this.reports_btn.IconRightZoom = 0D;
-            this.reports_btn.IconVisible = true;
-            this.reports_btn.IconZoom = 90D;
-            this.reports_btn.IsTab = false;
-            this.reports_btn.Location = new System.Drawing.Point(453, 604);
-            this.reports_btn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.reports_btn.Name = "reports_btn";
-            this.reports_btn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
-            this.reports_btn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.reports_btn.OnHoverTextColor = System.Drawing.Color.White;
-            this.reports_btn.selected = false;
-            this.reports_btn.Size = new System.Drawing.Size(120, 40);
-            this.reports_btn.TabIndex = 103;
-            this.reports_btn.Text = "Reports";
-            this.reports_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.reports_btn.Textcolor = System.Drawing.Color.White;
-            this.reports_btn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reports_btn.Click += new System.EventHandler(this.reports_btn_Click);
             // 
             // roll_txtbox
             // 
@@ -590,7 +553,6 @@
             this.Controls.Add(this.name_txtbox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.roll_txtbox);
-            this.Controls.Add(this.reports_btn);
             this.Controls.Add(this.lateFee_checkbox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.miscellaneousFee_checkbox);
@@ -643,7 +605,6 @@
         private System.Windows.Forms.CheckBox admissionFee_checkbox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox lateFee_checkbox;
-        private Bunifu.Framework.UI.BunifuFlatButton reports_btn;
         private Bunifu.Framework.UI.BunifuMetroTextbox roll_txtbox;
         private Bunifu.Framework.UI.BunifuMetroTextbox class_txtbox;
         private System.Windows.Forms.Label label8;

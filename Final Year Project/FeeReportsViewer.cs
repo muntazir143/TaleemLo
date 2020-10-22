@@ -35,9 +35,9 @@ namespace Final_Year_Project
                 DataSet ds = new DataSet();
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 adapter.Fill(ds);
-                class_cmbbox.ValueMember = "ClassID";
-                class_cmbbox.DisplayMember = "CLassName";
-                class_cmbbox.DataSource = ds.Tables[0];
+                //class_cmbbox.ValueMember = "ClassID";
+                //class_cmbbox.DisplayMember = "CLassName";
+                //class_cmbbox.DataSource = ds.Tables[0];
             }
             catch (Exception ex)
             {
@@ -47,7 +47,7 @@ namespace Final_Year_Project
 
         private void FeeReportsViewer_Load(object sender, EventArgs e)
         {
-            class_cmbbox.Items.Clear();
+            //class_cmbbox.Items.Clear();
             FillClasses();
         }
 
@@ -65,9 +65,9 @@ namespace Final_Year_Project
                 reportDocument = new ReportDocument();
                 SqlCommand cmd = new SqlCommand("getMonthlyStudentFee", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ClassID", class_cmbbox.SelectedValue);
-                cmd.Parameters.AddWithValue("@Month", month_year.Value.Month);
-                cmd.Parameters.AddWithValue("@Year", month_year.Value.Year);
+                //cmd.Parameters.AddWithValue("@ClassID", class_cmbbox.SelectedValue);
+                //cmd.Parameters.AddWithValue("@Month", month_year.Value.Month);
+                //cmd.Parameters.AddWithValue("@Year", month_year.Value.Year);
                 SqlDataReader reader = cmd.ExecuteReader();
                 reportDocument.Load("FeeVoucherReport.rpt");
                 reportDocument.SetDataSource(reader.FieldCount);

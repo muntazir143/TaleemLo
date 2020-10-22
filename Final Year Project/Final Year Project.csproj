@@ -67,6 +67,12 @@
     <Compile Include="attendance_form.Designer.cs">
       <DependentUpon>attendance_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="events_dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="events_dialog.Designer.cs">
+      <DependentUpon>events_dialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="FeeReportsViewer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     </Compile>
     <EmbeddedResource Include="attendance_form.resx">
       <DependentUpon>attendance_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="events_dialog.resx">
+      <DependentUpon>events_dialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FeeReportsViewer.resx">
       <DependentUpon>FeeReportsViewer.cs</DependentUpon>

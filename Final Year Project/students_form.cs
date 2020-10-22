@@ -288,6 +288,10 @@ namespace Final_Year_Project
                 bindingSource.Filter = "Name like '%" + search_txtbox.Text + "%'";
                 students_dgv.DataSource = bindingSource;
             }
+            //else if(search_cmbbox.Text == "Roll No."){
+            //    bindingSource.Filter = "Roll Number like '%" + search_txtbox.Text + "%'";
+            //    students_dgv.DataSource = bindingSource;
+            //}
         }
 
         void reportGenerator()

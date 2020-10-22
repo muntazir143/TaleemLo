@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -57,6 +58,30 @@ namespace Final_Year_Project
             login login = new login();
             login.Show();
             this.Hide();
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo fb = new ProcessStartInfo("www.facebook.com");
+            Process.Start(fb);
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo insta = new ProcessStartInfo("www.instagram.com");
+            Process.Start(insta);
+        }
+
+        private void bunifuImageButton3_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo whatsapp = new ProcessStartInfo("www.whatsapp.com");
+            Process.Start(whatsapp);
+        }
+
+        private void bunifuSwitch1_Click(object sender, EventArgs e)
+        {
+            events_dialog ed = new events_dialog();
+            ed.ShowDialog();
         }
     }
 }

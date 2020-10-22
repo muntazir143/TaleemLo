@@ -78,7 +78,7 @@
             this.feeVoucher_btn.ImageZoom = 50;
             this.feeVoucher_btn.LabelPosition = 38;
             this.feeVoucher_btn.LabelText = "Fee";
-            this.feeVoucher_btn.Location = new System.Drawing.Point(814, 321);
+            this.feeVoucher_btn.Location = new System.Drawing.Point(814, 294);
             this.feeVoucher_btn.Margin = new System.Windows.Forms.Padding(6);
             this.feeVoucher_btn.Name = "feeVoucher_btn";
             this.feeVoucher_btn.Size = new System.Drawing.Size(128, 129);
@@ -98,7 +98,7 @@
             this.feeStructure_btn.ImageZoom = 50;
             this.feeStructure_btn.LabelPosition = 36;
             this.feeStructure_btn.LabelText = "Fee Structure";
-            this.feeStructure_btn.Location = new System.Drawing.Point(814, 145);
+            this.feeStructure_btn.Location = new System.Drawing.Point(814, 118);
             this.feeStructure_btn.Margin = new System.Windows.Forms.Padding(6);
             this.feeStructure_btn.Name = "feeStructure_btn";
             this.feeStructure_btn.Size = new System.Drawing.Size(128, 129);
@@ -118,7 +118,7 @@
             this.bunifuTileButton1.ImageZoom = 50;
             this.bunifuTileButton1.LabelPosition = 38;
             this.bunifuTileButton1.LabelText = "Attendance";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(626, 321);
+            this.bunifuTileButton1.Location = new System.Drawing.Point(626, 294);
             this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuTileButton1.Name = "bunifuTileButton1";
             this.bunifuTileButton1.Size = new System.Drawing.Size(128, 129);
@@ -138,7 +138,7 @@
             this.branches_btn.ImageZoom = 50;
             this.branches_btn.LabelPosition = 41;
             this.branches_btn.LabelText = "Branches";
-            this.branches_btn.Location = new System.Drawing.Point(626, 145);
+            this.branches_btn.Location = new System.Drawing.Point(626, 118);
             this.branches_btn.Margin = new System.Windows.Forms.Padding(6);
             this.branches_btn.Name = "branches_btn";
             this.branches_btn.Size = new System.Drawing.Size(128, 129);
@@ -158,7 +158,7 @@
             this.school_btn.ImageZoom = 50;
             this.school_btn.LabelPosition = 41;
             this.school_btn.LabelText = "School";
-            this.school_btn.Location = new System.Drawing.Point(435, 145);
+            this.school_btn.Location = new System.Drawing.Point(435, 118);
             this.school_btn.Margin = new System.Windows.Forms.Padding(6);
             this.school_btn.Name = "school_btn";
             this.school_btn.Size = new System.Drawing.Size(128, 129);
@@ -178,7 +178,7 @@
             this.class_btn.ImageZoom = 50;
             this.class_btn.LabelPosition = 41;
             this.class_btn.LabelText = "Class";
-            this.class_btn.Location = new System.Drawing.Point(239, 321);
+            this.class_btn.Location = new System.Drawing.Point(239, 294);
             this.class_btn.Margin = new System.Windows.Forms.Padding(6);
             this.class_btn.Name = "class_btn";
             this.class_btn.Size = new System.Drawing.Size(128, 129);
@@ -198,7 +198,7 @@
             this.sections_btn.ImageZoom = 50;
             this.sections_btn.LabelPosition = 41;
             this.sections_btn.LabelText = "Sections";
-            this.sections_btn.Location = new System.Drawing.Point(46, 321);
+            this.sections_btn.Location = new System.Drawing.Point(46, 294);
             this.sections_btn.Margin = new System.Windows.Forms.Padding(6);
             this.sections_btn.Name = "sections_btn";
             this.sections_btn.Size = new System.Drawing.Size(128, 129);
@@ -218,7 +218,7 @@
             this.users_btn.ImageZoom = 50;
             this.users_btn.LabelPosition = 41;
             this.users_btn.LabelText = "Users";
-            this.users_btn.Location = new System.Drawing.Point(46, 145);
+            this.users_btn.Location = new System.Drawing.Point(46, 118);
             this.users_btn.Margin = new System.Windows.Forms.Padding(6);
             this.users_btn.Name = "users_btn";
             this.users_btn.Size = new System.Drawing.Size(128, 129);
@@ -238,7 +238,7 @@
             this.teachers_btn.ImageZoom = 50;
             this.teachers_btn.LabelPosition = 41;
             this.teachers_btn.LabelText = "Teachers";
-            this.teachers_btn.Location = new System.Drawing.Point(435, 321);
+            this.teachers_btn.Location = new System.Drawing.Point(435, 294);
             this.teachers_btn.Margin = new System.Windows.Forms.Padding(6);
             this.teachers_btn.Name = "teachers_btn";
             this.teachers_btn.Size = new System.Drawing.Size(128, 129);
@@ -258,7 +258,7 @@
             this.students_btn.ImageZoom = 50;
             this.students_btn.LabelPosition = 41;
             this.students_btn.LabelText = "Students";
-            this.students_btn.Location = new System.Drawing.Point(239, 145);
+            this.students_btn.Location = new System.Drawing.Point(239, 118);
             this.students_btn.Margin = new System.Windows.Forms.Padding(6);
             this.students_btn.Name = "students_btn";
             this.students_btn.Size = new System.Drawing.Size(128, 129);
@@ -283,7 +283,7 @@
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.bunifuSeparator1);
             this.Name = "uc_admin_dashboard";
-            this.Size = new System.Drawing.Size(1026, 600);
+            this.Size = new System.Drawing.Size(1026, 615);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(students_form));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -61,11 +61,11 @@
             this.update_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.add_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.search_cmbbox = new System.Windows.Forms.ComboBox();
-            this.search_txtbox = new System.Windows.Forms.TextBox();
             this.print_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.image_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.search_txtbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.students_dgv)).BeginInit();
@@ -195,19 +195,19 @@
             // students_dgv
             // 
             this.students_dgv.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.students_dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.students_dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.students_dgv.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.students_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.students_dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.students_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.students_dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.students_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.students_dgv.DoubleBuffered = true;
             this.students_dgv.EnableHeadersVisualStyles = false;
@@ -390,7 +390,7 @@
             this.view_btn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.view_btn.OnHoverTextColor = System.Drawing.Color.White;
             this.view_btn.selected = false;
-            this.view_btn.Size = new System.Drawing.Size(130, 43);
+            this.view_btn.Size = new System.Drawing.Size(129, 43);
             this.view_btn.TabIndex = 81;
             this.view_btn.Text = "View";
             this.view_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -426,7 +426,7 @@
             this.delete_btn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.delete_btn.OnHoverTextColor = System.Drawing.Color.White;
             this.delete_btn.selected = false;
-            this.delete_btn.Size = new System.Drawing.Size(130, 43);
+            this.delete_btn.Size = new System.Drawing.Size(129, 43);
             this.delete_btn.TabIndex = 80;
             this.delete_btn.Text = "Delete";
             this.delete_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -455,14 +455,14 @@
             this.update_btn.IconVisible = true;
             this.update_btn.IconZoom = 90D;
             this.update_btn.IsTab = false;
-            this.update_btn.Location = new System.Drawing.Point(683, 651);
+            this.update_btn.Location = new System.Drawing.Point(682, 651);
             this.update_btn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.update_btn.Name = "update_btn";
             this.update_btn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
             this.update_btn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.update_btn.OnHoverTextColor = System.Drawing.Color.White;
             this.update_btn.selected = false;
-            this.update_btn.Size = new System.Drawing.Size(130, 43);
+            this.update_btn.Size = new System.Drawing.Size(129, 43);
             this.update_btn.TabIndex = 79;
             this.update_btn.Text = "Update";
             this.update_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -498,7 +498,7 @@
             this.add_btn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.add_btn.OnHoverTextColor = System.Drawing.Color.White;
             this.add_btn.selected = false;
-            this.add_btn.Size = new System.Drawing.Size(130, 43);
+            this.add_btn.Size = new System.Drawing.Size(129, 43);
             this.add_btn.TabIndex = 78;
             this.add_btn.Text = "Add";
             this.add_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -510,22 +510,11 @@
             // 
             this.search_cmbbox.FormattingEnabled = true;
             this.search_cmbbox.Items.AddRange(new object[] {
-            "Name",
-            "Roll No.",
-            "Father Name",
-            "Class"});
+            "Name"});
             this.search_cmbbox.Location = new System.Drawing.Point(399, 115);
             this.search_cmbbox.Name = "search_cmbbox";
             this.search_cmbbox.Size = new System.Drawing.Size(210, 24);
             this.search_cmbbox.TabIndex = 82;
-            // 
-            // search_txtbox
-            // 
-            this.search_txtbox.Location = new System.Drawing.Point(657, 118);
-            this.search_txtbox.Name = "search_txtbox";
-            this.search_txtbox.Size = new System.Drawing.Size(188, 21);
-            this.search_txtbox.TabIndex = 83;
-            this.search_txtbox.TextChanged += new System.EventHandler(this.search_txtbox_TextChanged);
             // 
             // print_btn
             // 
@@ -555,7 +544,7 @@
             this.print_btn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.print_btn.OnHoverTextColor = System.Drawing.Color.White;
             this.print_btn.selected = false;
-            this.print_btn.Size = new System.Drawing.Size(130, 43);
+            this.print_btn.Size = new System.Drawing.Size(129, 43);
             this.print_btn.TabIndex = 84;
             this.print_btn.Text = "Print";
             this.print_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -591,7 +580,7 @@
             this.image_btn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.image_btn.OnHoverTextColor = System.Drawing.Color.White;
             this.image_btn.selected = false;
-            this.image_btn.Size = new System.Drawing.Size(120, 40);
+            this.image_btn.Size = new System.Drawing.Size(120, 39);
             this.image_btn.TabIndex = 85;
             this.image_btn.Text = "Open";
             this.image_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -610,6 +599,14 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // search_txtbox
+            // 
+            this.search_txtbox.Location = new System.Drawing.Point(657, 118);
+            this.search_txtbox.Name = "search_txtbox";
+            this.search_txtbox.Size = new System.Drawing.Size(188, 21);
+            this.search_txtbox.TabIndex = 83;
+            this.search_txtbox.TextChanged += new System.EventHandler(this.search_txtbox_TextChanged);
             // 
             // students_form
             // 
@@ -694,10 +691,10 @@
         private Bunifu.Framework.UI.BunifuFlatButton update_btn;
         private Bunifu.Framework.UI.BunifuFlatButton add_btn;
         private System.Windows.Forms.ComboBox search_cmbbox;
-        private System.Windows.Forms.TextBox search_txtbox;
         private Bunifu.Framework.UI.BunifuFlatButton print_btn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuFlatButton image_btn;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox search_txtbox;
     }
 }

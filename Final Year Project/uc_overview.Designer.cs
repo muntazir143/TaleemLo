@@ -32,21 +32,23 @@
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.totalstudents_label = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
-            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.totalteachers_label = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
-            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.eventTitle_label = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.eventDescription_label = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.createEvent_btn = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuCards1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuCards2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.bunifuCards3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel3
@@ -77,7 +79,7 @@
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(169)))), ((int)(((byte)(147)))));
-            this.bunifuCards1.Controls.Add(this.bunifuCustomLabel2);
+            this.bunifuCards1.Controls.Add(this.totalstudents_label);
             this.bunifuCards1.Controls.Add(this.bunifuCustomLabel1);
             this.bunifuCards1.Controls.Add(this.pictureBox1);
             this.bunifuCards1.LeftSahddow = false;
@@ -88,14 +90,16 @@
             this.bunifuCards1.Size = new System.Drawing.Size(258, 142);
             this.bunifuCards1.TabIndex = 15;
             // 
-            // pictureBox1
+            // totalstudents_label
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(14, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 107);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.totalstudents_label.AutoSize = true;
+            this.totalstudents_label.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalstudents_label.ForeColor = System.Drawing.Color.White;
+            this.totalstudents_label.Location = new System.Drawing.Point(160, 85);
+            this.totalstudents_label.Name = "totalstudents_label";
+            this.totalstudents_label.Size = new System.Drawing.Size(21, 23);
+            this.totalstudents_label.TabIndex = 3;
+            this.totalstudents_label.Text = "0";
             // 
             // bunifuCustomLabel1
             // 
@@ -108,24 +112,13 @@
             this.bunifuCustomLabel1.TabIndex = 2;
             this.bunifuCustomLabel1.Text = "Students\r\n";
             // 
-            // bunifuCustomLabel2
-            // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(160, 85);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(32, 23);
-            this.bunifuCustomLabel2.TabIndex = 3;
-            this.bunifuCustomLabel2.Text = "15";
-            // 
             // bunifuCards2
             // 
             this.bunifuCards2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(24)))), ((int)(((byte)(69)))));
             this.bunifuCards2.BorderRadius = 5;
             this.bunifuCards2.BottomSahddow = true;
             this.bunifuCards2.color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
-            this.bunifuCards2.Controls.Add(this.bunifuCustomLabel4);
+            this.bunifuCards2.Controls.Add(this.totalteachers_label);
             this.bunifuCards2.Controls.Add(this.bunifuCustomLabel5);
             this.bunifuCards2.Controls.Add(this.pictureBox2);
             this.bunifuCards2.LeftSahddow = false;
@@ -136,16 +129,16 @@
             this.bunifuCards2.Size = new System.Drawing.Size(258, 142);
             this.bunifuCards2.TabIndex = 16;
             // 
-            // bunifuCustomLabel4
+            // totalteachers_label
             // 
-            this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(160, 85);
-            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(32, 23);
-            this.bunifuCustomLabel4.TabIndex = 3;
-            this.bunifuCustomLabel4.Text = "10";
+            this.totalteachers_label.AutoSize = true;
+            this.totalteachers_label.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalteachers_label.ForeColor = System.Drawing.Color.White;
+            this.totalteachers_label.Location = new System.Drawing.Point(160, 85);
+            this.totalteachers_label.Name = "totalteachers_label";
+            this.totalteachers_label.Size = new System.Drawing.Size(21, 23);
+            this.totalteachers_label.TabIndex = 3;
+            this.totalteachers_label.Text = "0";
             // 
             // bunifuCustomLabel5
             // 
@@ -157,16 +150,6 @@
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(92, 23);
             this.bunifuCustomLabel5.TabIndex = 2;
             this.bunifuCustomLabel5.Text = "Teachers";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(14, 19);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 107);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
             // 
             // bunifuCustomLabel6
             // 
@@ -184,7 +167,8 @@
             this.bunifuCards3.BorderRadius = 5;
             this.bunifuCards3.BottomSahddow = true;
             this.bunifuCards3.color = System.Drawing.Color.Navy;
-            this.bunifuCards3.Controls.Add(this.bunifuCustomLabel7);
+            this.bunifuCards3.Controls.Add(this.eventDescription_label);
+            this.bunifuCards3.Controls.Add(this.eventTitle_label);
             this.bunifuCards3.LeftSahddow = false;
             this.bunifuCards3.Location = new System.Drawing.Point(188, 406);
             this.bunifuCards3.Name = "bunifuCards3";
@@ -193,21 +177,77 @@
             this.bunifuCards3.Size = new System.Drawing.Size(605, 147);
             this.bunifuCards3.TabIndex = 18;
             // 
-            // bunifuCustomLabel7
+            // eventTitle_label
             // 
-            this.bunifuCustomLabel7.AutoSize = true;
-            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(40, 42);
-            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(351, 48);
-            this.bunifuCustomLabel7.TabIndex = 1;
-            this.bunifuCustomLabel7.Text = "Corona Virus Alert: \r\n\r\nSchool will be off from March 16th to September 15th.";
+            this.eventTitle_label.AutoSize = true;
+            this.eventTitle_label.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eventTitle_label.Location = new System.Drawing.Point(43, 26);
+            this.eventTitle_label.Name = "eventTitle_label";
+            this.eventTitle_label.Size = new System.Drawing.Size(131, 16);
+            this.eventTitle_label.TabIndex = 1;
+            this.eventTitle_label.Text = "Corona Virus Alert:";
+            // 
+            // eventDescription_label
+            // 
+            this.eventDescription_label.AutoSize = true;
+            this.eventDescription_label.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eventDescription_label.Location = new System.Drawing.Point(43, 57);
+            this.eventDescription_label.Name = "eventDescription_label";
+            this.eventDescription_label.Size = new System.Drawing.Size(351, 16);
+            this.eventDescription_label.TabIndex = 2;
+            this.eventDescription_label.Text = "School will be off from March 16th to September 15th.";
+            // 
+            // createEvent_btn
+            // 
+            this.createEvent_btn.ActiveBorderThickness = 1;
+            this.createEvent_btn.ActiveCornerRadius = 20;
+            this.createEvent_btn.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            this.createEvent_btn.ActiveForecolor = System.Drawing.Color.White;
+            this.createEvent_btn.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            this.createEvent_btn.BackColor = System.Drawing.Color.White;
+            this.createEvent_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("createEvent_btn.BackgroundImage")));
+            this.createEvent_btn.ButtonText = "Create Event";
+            this.createEvent_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.createEvent_btn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createEvent_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            this.createEvent_btn.IdleBorderThickness = 1;
+            this.createEvent_btn.IdleCornerRadius = 20;
+            this.createEvent_btn.IdleFillColor = System.Drawing.Color.White;
+            this.createEvent_btn.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            this.createEvent_btn.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(68)))), ((int)(((byte)(113)))));
+            this.createEvent_btn.Location = new System.Drawing.Point(801, 463);
+            this.createEvent_btn.Margin = new System.Windows.Forms.Padding(5);
+            this.createEvent_btn.Name = "createEvent_btn";
+            this.createEvent_btn.Size = new System.Drawing.Size(136, 41);
+            this.createEvent_btn.TabIndex = 19;
+            this.createEvent_btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.createEvent_btn.Click += new System.EventHandler(this.createEvent_btn_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(14, 19);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 107);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(14, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 107);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // uc_overview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.createEvent_btn);
             this.Controls.Add(this.bunifuCards3);
             this.Controls.Add(this.bunifuCustomLabel6);
             this.Controls.Add(this.bunifuCards2);
@@ -216,14 +256,15 @@
             this.Controls.Add(this.bunifuSeparator1);
             this.Name = "uc_overview";
             this.Size = new System.Drawing.Size(1000, 600);
+            this.Load += new System.EventHandler(this.uc_overview_Load);
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuCards2.ResumeLayout(false);
             this.bunifuCards2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.bunifuCards3.ResumeLayout(false);
             this.bunifuCards3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,15 +275,17 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
+        private Bunifu.Framework.UI.BunifuCustomLabel totalstudents_label;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuCards bunifuCards2;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
+        private Bunifu.Framework.UI.BunifuCustomLabel totalteachers_label;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
         private Bunifu.Framework.UI.BunifuCards bunifuCards3;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
+        private Bunifu.Framework.UI.BunifuCustomLabel eventTitle_label;
+        private Bunifu.Framework.UI.BunifuCustomLabel eventDescription_label;
+        private Bunifu.Framework.UI.BunifuThinButton2 createEvent_btn;
     }
 }

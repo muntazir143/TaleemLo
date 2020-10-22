@@ -87,6 +87,11 @@ namespace Final_Year_Project
 
         private void reports_btn_Click(object sender, EventArgs e)
         {
+            foreach (DataGridView dgv in feevoucher_dgv.Rows)
+            {
+                DataTable dt = new DataTable();
+               // dt.Rows.Add(dgv)
+            }
             FeeReportsViewer feeReportsViewer = new FeeReportsViewer();
             feeReportsViewer.Show();
         }
